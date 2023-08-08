@@ -3,7 +3,6 @@
 ---
 
 
-# Decrypt Ptuning
 
 [P-Tuning v2: Prompt Tuning Can Be Comparable to Fine-tuning Universally Across Scales and Tasks](https://arxiv.org/abs/2110.07602)
 ### 1. 总结
