@@ -4,9 +4,6 @@
 
 
 
-```
-
-
 [P-Tuning v2: Prompt Tuning Can Be Comparable to Fine-tuning Universally Across Scales and Tasks](https://arxiv.org/abs/2110.07602)
 ### 1. 总结
 ptuning 是介于prompt engineer和Full FT之间的一种方案，目的是希望用少量训练成本，优化Handcrafted prompt效果，接近Full FT效果，具体效果和model size和task有关，整体看有一定实践价值。
