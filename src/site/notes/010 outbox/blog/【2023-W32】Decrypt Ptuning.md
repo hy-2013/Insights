@@ -19,7 +19,7 @@ ptuning v1即prompt tuning，prompt virtual token 加入位置不固定且一般
 	- The most significant improvement originates from appling continuous prompts for every layer of the pretrained model, instead of the mere input layer.
 - Performance：Vary depending on the specific task. For example, in Table2Text tasks, prompt tuning with a parameter size of only 0.1% can outperform fine-tuning, while in Xsum summary tasks (NLU), like hard sequence tagging tasks (QA), prompt tuning may have slightly worse performance compared to fine-tuning. It is important to consider the task requirements and model scale when choosing between these techniques.
 
-![Pasted image 20230803222836.png](/img/user/990%20Attachment/Pasted%20image%2020230803222836.png)
+![Pasted image 20230803222836.png](src/site/img/user/990%20Attachment/Pasted%20image%2020230803222836.png)
 
 ### 3. ptuning v2 实现代码
 [class RobertaPrefixForTokenClassification(RobertaPreTrainedModel):](https://github.com/THUDM/P-tuning-v2/blob/1cd083ece14762e81a049c3ca4b47517801e7e4a/model/token_classification.py#L221-L222)
