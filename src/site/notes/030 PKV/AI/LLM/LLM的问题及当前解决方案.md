@@ -6,7 +6,7 @@
 
 > 持续更新中！
 
-
+![test](https://github.com/hy-2013/Insights/blob/main/src/site/img/user/990%20Attachment/Pasted%20image%2020230630174506.png)
 ### 一、问题和方案
 1. Context短：
 	1. FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness
@@ -64,6 +64,7 @@
 	1. Evidence of Meaning in Language Models Trained on Program
 	2. TinyStories: How Small Can Language Models Be and Still Speak Coherent English?
 3. 中文LLM
-	8. GLM：[GLM: General Language Model Pretraining with Autoregressive Blank Infilling](https://arxiv.org/abs/2103.10360)
+	1. GLM：[GLM: General Language Model Pretraining with Autoregressive Blank Infilling](https://arxiv.org/abs/2103.10360)
+
 
 
