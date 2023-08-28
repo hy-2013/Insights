@@ -1,5 +1,4 @@
 {
-    "homepage": "https://hy-2013.github.io/Insights"
     "name": "web",
     "version": "1.0.0",
     "description": "",
@@ -12,7 +11,6 @@
         "build:sass": "sass src/site/styles:dist/styles --style compressed",
         "get-theme": "node src/site/get-theme.js",
         "build": "npm-run-all get-theme build:*"
-        "deploy": "gh-pages -d build"
     },
     "keywords": [],
     "author": "",
