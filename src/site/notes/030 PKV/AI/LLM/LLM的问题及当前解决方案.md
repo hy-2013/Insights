@@ -10,29 +10,31 @@
 1. [This repository contains a hand-curated resources for Prompt Engineering with a focus on Generative Pre-trained Transformer (GPT), ChatGPT, PaLM etc](https://github.com/promptslab/Awesome-Prompt-Engineering)
 2. 
 
-llm在低推理成本、高准确性上的进展，决定了这波AI能有多大影响力。
-
+### 一些不成熟的思考
+1. 关于这么AI技术的影响力：由llm在低推理成本、高准确性上的进展的程度决定。但即使hallucination解决到GPT4的程度止步不前，在AIGC和人机交互上的变革也已经可以提高生产力。
+2. 关于大模型生态：未来会有多个「基座LLM」，分由多个公司和多个国家提供（类似芯片产业），不会赢家通吃，会有一些行业LLM（[[030 PKV/AI/LLM/如何训练行业大模型\|如何训练行业大模型]]），中间层也会跑出一些公司，应用层生态目前看LLM-native还比较少，多数是对现有应用的升级改造。
+3. 关于开源和闭源：闭源商业LLM还会至少领先3年+，主要是算力优势、人才优势、先发优势。
+4. 关于未来：
+	1. 多模态LLM是当前提升LLM能力最低矮的果实
+	2. Agent/Bot想象力很大，限于当前LLM的能力，从游戏场景开始较合理
+	3. 具身智能：如果说Agent更多是LLM+Software，那么具身智能是LLM+Software+机器人，类似黑客帝国。
 
 ### 一、问题和方案
-1. Context短：
-	1. FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness
-	2. MQA：Fast Transformer Decoding: One Write-Head is All You Need
-	3. Scaling Transformer to 1M tokens and beyond with RMT
-	4. MEGABYTE: Predicting Million-byte Sequences with Multiscale Transformers
+1. Context Window短：
+	1. Retentive Network: A Successor to Transformer for Large Language Models
+	2. FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness
+	3. MQA：Fast Transformer Decoding: One Write-Head is All You Need
+	4. Scaling Transformer to 1M tokens and beyond with RMT
+	5. MEGABYTE: Predicting Million-byte Sequences with Multiscale Transformers
 2. 专业性：领域垂类model：
 	2. self-Instruct：Self-Instruct: Aligning Language Model with Self Generated Instructions
 	5. 金融：BloombergGPT: A Large Language Model for Finance
 	3. 医疗：Towards Expert-Level Medical Question Answering with Large Language Models
 	4. 法律：Chatlaw
 	5. 心理咨询：华佗、扁鹊
-3. 关于训练：
-	1. LIMA: Less Is More for Alignment
-	2. RM均匀反馈的问题
-	3. 如何构建训练数据：DoReMi: Optimizing Data Mixtures Speeds Up Language Model Pretraining
-	4. SLiC-HF: Sequence Likelihood Calibration with Human Feedback
 4. 关于成本
 	1. 训练成本
-	2. 推理成本：小模型生成，大模型（GPT4）评判。后面0-3年应用展开期会主要卷这个
+	2. 推理成本：小模型生成，大模型（GPT4）评判。后面0-3年应用展开期会主要卷这个。
 		1. sampling：比BS和top_p更高效的采样方案
 		2. 小模型生成更多top_k或top_p，由大模型得到top_top_k，大模型和小模型异步并发，提高推理效率、降低成本
 5. 提高准确性：
@@ -66,23 +68,31 @@ llm在低推理成本、高准确性上的进展，决定了这波AI能有多大
 	5. SFT：有额外训练成本
 		1. Full FT
 		2. PEFT：
-			1. Prompt Tuning：训练一个task-specify的embedding input prompt token（包括上层trainable variables）
-			2. Lora
+			1. Prompt Tuning：训练一个task-specify的embedding input prompt token（包括上层trainable variables），参考[[010 outbox/blog/【2023-W32】Decrypt Ptuning\|【2023-W32】Decrypt Ptuning]]。
+			2. Lora/Qlora
 			3. Adapter
 6. 时效性：
 	1. Plugins
 	2. Retrieval augumented prompt
 
-### 二、其他
-1. Agent阶段（完成一个复杂任务）：chain / agents: autoGPT/GPT engineer/ReAct
-	1. 定义：借助大模型，能**自主理解、规划、执行复杂任务**的系统。 
-	2. 利用LLM、Memory和各类Tools/Plugin做task拆分、优先级排序和执行完成复杂任务。agent都是GPT4，但按功能分为Task Creation Agent、Task Prioritization Agent、Task Execution Agent。
-	3. Agent = 大模型+记忆+主动规划+工具使用
+### 二、Agent
+定义：自主或半自主完成一个复杂任务，如autoGPT/GPT engineer等
+1. 定义：借助大模型，能**自主理解、规划、执行复杂任务**的系统。 
+2. 利用LLM、Memory和各类Tools/Plugin做task拆分、优先级排序和执行完成复杂任务。agent都是GPT4，但按功能分为Task Creation Agent、Task Prioritization Agent、Task Execution Agent。
+3. Agent = 大模型+记忆+主动规划+工具使用
+
+### 三、其他
+1. 关于训练：
+	1.  RM均匀反馈的问题
+	2. 如何构建训练数据：DoReMi: Optimizing Data Mixtures Speeds Up Language Model Pretraining
+	3. SLiC-HF: Sequence Likelihood Calibration with Human Feedback
 2. 认识LLM
-	1. Evidence of Meaning in Language Models Trained on Program
-	2. TinyStories: How Small Can Language Models Be and Still Speak Coherent English?
+	1. LIMA: Less Is More for Alignment
+	2. Evidence of Meaning in Language Models Trained on Program
+	3. TinyStories: How Small Can Language Models Be and Still Speak Coherent English?
 3. 中文LLM
 	1. GLM：[GLM: General Language Model Pretraining with Autoregressive Blank Infilling](https://arxiv.org/abs/2103.10360)
+	2. XX-Chinese系列：
 
 
 
