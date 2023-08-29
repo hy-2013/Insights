@@ -10,6 +10,8 @@
 1. [This repository contains a hand-curated resources for Prompt Engineering with a focus on Generative Pre-trained Transformer (GPT), ChatGPT, PaLM etc](https://github.com/promptslab/Awesome-Prompt-Engineering)
 2. 
 
+llm在低推理成本、高准确性上的进展，决定了这波AI能有多大影响力。
+
 
 ### 一、问题和方案
 1. Context短：
@@ -31,6 +33,8 @@
 4. 关于成本
 	1. 训练成本
 	2. 推理成本：小模型生成，大模型（GPT4）评判。后面0-3年应用展开期会主要卷这个
+		1. sampling：比BS和top_p更高效的采样方案
+		2. 小模型生成更多top_k或top_p，由大模型得到top_top_k，大模型和小模型异步并发，提高推理效率、降低成本
 5. 提高准确性：
 { #8297fc}
 
