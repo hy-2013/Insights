@@ -12,6 +12,7 @@
 -  **AI**
 	-  **Paper**
 		- [[030 PKV/AI/LLM/Paper/关于llama2\|关于llama2]]
+	- [[030 PKV/AI/LLM/LLM的问题及当前解决方案\|LLM的问题及当前解决方案]]
 	- [[030 PKV/AI/LLM/如何训练行业大模型\|如何训练行业大模型]]
 
 
