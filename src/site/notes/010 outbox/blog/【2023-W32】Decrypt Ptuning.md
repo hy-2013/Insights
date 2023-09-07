@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/010 outbox/blog/【2023-W32】Decrypt Ptuning/","tags":["gardenEntry"]}
+{"dg-publish":true,"permalink":"/010 outbox/blog/【2023-W32】Decrypt Ptuning/"}
 ---
 
 
