@@ -14,12 +14,14 @@
 1. RM和RLHF的训练数据都是SFT后的model生成的
 2. RM的训练：遇到<|reward|>生成score？
 3. RL只训练completion对应Token，每个Token接受相同的梯度惩罚或奖励
+	1. 增加矩阵D：causal masking and exponential decay along relative distance as one matrix。(（QK^ .* D）V )
 4. RLHF导致loss entropy或model collapse
 
 ---
 1. LLM记住了很多fact-based knowledge，但受Context Window的限制
-2. LLM不会reflection或inner monologue
-3. LLM需要被引导step by step的reasoning或任务拆解
+2. LLM不会reflection或inner monologue（system 2）
+3. LLM需要被引导step by step的reasoning或任务拆解（COT）
+2和3都更像人的思考过程。
 
 ---
 ### Keep in mind
