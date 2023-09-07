@@ -29,21 +29,13 @@
 	4. 能否打破社会壁垒到IT之外的领域去，以更低的成本更好的解决domain问题
 
 ## 一、问题和方案
-1. Context Window短：
-	1. 模型改进：
-		1. 各类外推方案
-		2. Retentive Network: A Successor to Transformer for Large Language Models
-		3. MQA：Fast Transformer Decoding: One Write-Head is All You Need
-		4. Scaling Transformer to 1M tokens and beyond with RMT
-		5. MEGABYTE: Predicting Million-byte Sequences with Multiscale Transformers
-	2. 编译或硬件
-		1. FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness
-	3. 观点：MHSA是一种笛卡尔积式的暴力记忆方式，而人脑会选择记忆（重要性）和归纳整合。
 
-2. 提高准确性：
+当前LLM的主要问题包括：1. 准确性，2. 高成本，3. 专业性，4. 时效性，5. 安全性。下面逐一介绍：
+
+1. 提高准确性：
 { #8297fc}
 
-	1. 1. 无训练成本：更好的取出知识
+	1. 无训练成本：更好的取出知识
 		1. prompt engineering：
 			1. ICL + System prompt：设定角色/说明，给出QA示例。
 			2. COT：ICL中引入任务拆解过程，让LLM step by step的做任务拆解，更像人类的方式做reasoning
@@ -90,9 +82,20 @@
 		2. 增量Pretrain：提高信息压缩比
 			1. MOE
 		3. Pretrain：更好的数据配比、数据质量、训练技巧、可用的训练资源等都很重要
+		4. 研究热点：
+			1. Context Window短：
+				1. 模型改进：
+					1. 各类外推方案
+					2. Retentive Network: A Successor to Transformer for Large Language Models
+					3. MQA：Fast Transformer Decoding: One Write-Head is All You Need
+					4. Scaling Transformer to 1M tokens and beyond with RMT
+					5. MEGABYTE: Predicting Million-byte Sequences with Multiscale Transformers
+				2. 编译或硬件
+					1. FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness
+				3. 观点：MHSA是一种笛卡尔积式的暴力记忆方式，而人脑会选择记忆（重要性）和归纳整合。
 	3. 评价指标： instruction following, factual accuracy, and refusal behavior.
 		1. 更广泛的评价库-[the OpenAI Evals library](https://github.com/openai/evals/tree/main)：report shortcomings using models
-3. 关于成本（GPU固定成本和电量）
+2. 高成本（GPU固定成本和电量）
 	1. 训练成本：参照Chinchilla scaling laws
 		1. 基座LLM成本成本
 		2. 领域LLM训练成本
@@ -103,15 +106,15 @@
 			3. Speculative decoding：小模型生成，大模型（GPT4）挑选：小模型生成更多top_k或top_p，由大模型得到top_top_k，大模型和小模型异步并发，提高推理效率、降低成本。还有哪些比BS和top_p更高效的采样方案？
 		2. 硬件或框架
 			1. FPGA、AMD Radeon series + ROCm、FlashAttention等
-4. 专业性：领域垂类LLM，方案参考[[030 PKV/AI/LLM/如何训练行业大模型\|如何训练行业大模型]]
+3. 专业性：领域垂类LLM，方案参考[[030 PKV/AI/LLM/如何训练行业大模型\|如何训练行业大模型]]
 	1. 金融：BloombergGPT
 	2. 医疗：Med-Palm2等
 	3. 法律：Chatlaw（值得好好读）
 	4. 心理咨询/情感陪伴：扁鹊、PI
-5. 时效性：
+4. 时效性：
 	1. Plugins：天气、证券股票
 	2. Retrieval augumented prompt
-6. 安全性
+5. 安全性
 	1. SuperAlignment：
 		1. 创建人类水平甚至超级智能的 自动对齐ai系统
 	2. 隐私安全
