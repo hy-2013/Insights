@@ -10,6 +10,7 @@
 资源汇总：
 
 1. [This repository contains a hand-curated resources for Prompt Engineering with a focus on Generative Pre-trained Transformer (GPT), ChatGPT, PaLM etc](https://github.com/promptslab/Awesome-Prompt-Engineering)
+2. [GitHub - openai/openai-cookbook: Examples and guides for using the OpenAI API](https://github.com/openai/openai-cookbook/tree/main)
 
 ## 一些不成熟的思考
 1. 关于这波AI技术的影响力：由llm在低推理成本、高准确性上的进展决定。但即使hallucination解决到GPT4的程度止步不前，在AIGC和人机交互上的变革也已经可以提高生产力。
