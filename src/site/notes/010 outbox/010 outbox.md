@@ -6,13 +6,11 @@
 
 
 - **blog**
-	- [[010 outbox/blog/【2023-W32】Decrypt Ptuning\|【2023-W32】Decrypt Ptuning]]
+	- [[010 outbox/blog/【LLM Review】Decrypt Ptuning - 2023W32\|【LLM Review】Decrypt Ptuning - 2023W32]]
 - **ppt**
+	- [[010 outbox/ppt/【LLM Review】The stage review of LLM - 2023M9\|【LLM Review】The stage review of LLM - 2023M9]]
 	- [[010 outbox/ppt/卡帕西build2023分享-知识点整理\|卡帕西build2023分享-知识点整理]]
--  **AI**
-	-  **Paper**
-		- [[030 PKV/AI/LLM/Paper/关于llama2\|关于llama2]]
-	- [[030 PKV/AI/LLM/LLM的问题及当前解决方案\|LLM的问题及当前解决方案]]
-	- [[030 PKV/AI/LLM/如何训练行业大模型\|如何训练行业大模型]]
+- [[010 outbox/Read Paper\|Read Paper]]
+
 
 
