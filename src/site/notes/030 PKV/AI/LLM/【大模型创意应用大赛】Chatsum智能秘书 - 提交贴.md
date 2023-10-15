@@ -9,19 +9,19 @@
 
 ## 二、作品描述
 你是否经常遇到一堆群的未读消息？是否有FOMO（fear of missing out）？是否为了找到某条忘记关键词的重要信息爬楼到头昏眼花？对大量消息或文档的阅读、筛选、整理、记录等无不大量占用我们的精力。Chatsum智能秘书（简称Chatsum）的出现就是为了帮你解决这些问题。
-![Pasted image 20231015155906.png](/img/user/990%20Attachment/Pasted%20image%2020231015155906.png)
-![Pasted image 20231015155935.png](/img/user/990%20Attachment/Pasted%20image%2020231015155935.png)
+![Pasted image 20231015155906|300](https://raw.githubusercontent.com/hy-2013/Insights/main/src/site/img/user/990%20AttachmentPasted%20image%2020231015155906.png)
+![Pasted image 20231015155935|300](https://raw.githubusercontent.com/hy-2013/Insights/main/src/site/img/user/990%20AttachmentPasted%20image%2020231015155935.png)
 ### 2.1 Demo
 1. DC Chatsum Bot
-![Pasted image 20231015160626.png](/img/user/990%20Attachment/Pasted%20image%2020231015160626.png)
+![Pasted image 20231015160626|600](https://raw.githubusercontent.com/hy-2013/Insights/main/src/site/img/user/990%20AttachmentPasted%20image%2020231015160626.png)
 	说明：由于DC现在不支持批量自定义发送消息，目前想体验DC体验Chatsum Bot的用户只能通过输入<触发词，消息>的方式逐条发送，Chatsum Bot会自动归总并回传。这种方式确实体验不太好，我们也希望能和DC的同学一起共建，提升Chatsum Bot的易用性（希望效能平台部的老板能看到和联系我们）。当前欢迎体验我们的Web App，你只需要将群消息批量选中后导入到氢笔记，脱敏后直接copy到Web App即可。
 
 2. Web App
-![Pasted image 20231015160007.png](/img/user/990%20Attachment/Pasted%20image%2020231015160007.png)
+![Pasted image 20231015160007|600](https://raw.githubusercontent.com/hy-2013/Insights/main/src/site/img/user/990%20AttachmentPasted%20image%2020231015160007.png)
 体验链接（无需注册）：[Web App](http://10.191.74.228:8060)。demo case见附录。
 
 3. 归总报告可视化
-![Pasted image 20231015160121.png](/img/user/990%20Attachment/Pasted%20image%2020231015160121.png)
+![Pasted image 20231015160121|600](https://raw.githubusercontent.com/hy-2013/Insights/main/src/site/img/user/990%20AttachmentPasted%20image%2020231015160121.png)
 ### 2.2 Chatsum功能
 1. 已实现功能
 	1. DChat群消息自动总结、归整、xmind式结构化展示和每日报告生成
@@ -37,13 +37,13 @@
 		4. 会议纪要
 ### 2.3 Chatsum架构和执行流
 1. 架构图
-![Pasted image 20231015155535.png](/img/user/990%20Attachment/Pasted%20image%2020231015155535.png)
+![Pasted image 20231015155535|600](https://raw.githubusercontent.com/hy-2013/Insights/main/src/site/img/user/990%20AttachmentPasted%20image%2020231015155535.png)
 
 2. 执行流
 * DC Chatsum Bot
-![Pasted image 20231015155729.png](/img/user/990%20Attachment/Pasted%20image%2020231015155729.png)
+![Pasted image 20231015155729|600](https://raw.githubusercontent.com/hy-2013/Insights/main/src/site/img/user/990%20AttachmentPasted%20image%2020231015155729.png)
 * Web App Bot
-![Pasted image 20231015160136.png](/img/user/990%20Attachment/Pasted%20image%2020231015160136.png)
+![Pasted image 20231015160136|600](https://raw.githubusercontent.com/hy-2013/Insights/main/src/site/img/user/990%20AttachmentPasted%20image%2020231015160136.png)
 
 ## 三、作品创新度
 以Chat为入口，将LLM的能力赋能到日常Workflow的全流程，包括交流沟通、代办和重要事件的生成和提醒、业务知识问答、过滤不相关信息等，大幅提升员工的工作效率。
