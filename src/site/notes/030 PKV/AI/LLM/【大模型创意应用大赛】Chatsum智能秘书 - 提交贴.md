@@ -35,6 +35,7 @@
 		2. 重要事件生成
 		3. Dealine提醒
 		4. 会议纪要
+	3. Agent智能秘书：自主「沟通」，与其他Agent联动自主或半自主的「完成工作内容」。
 ### 2.3 Chatsum架构和执行流
 1. 架构图
 ![Pasted image 20231015155535|600](https://raw.githubusercontent.com/hy-2013/Insights/main/src/site/img/user/990%20AttachmentPasted%20image%2020231015155535.png)
