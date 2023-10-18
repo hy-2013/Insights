@@ -6,11 +6,13 @@
 - **blog**
 	- [[010 outbox/blog/【LLM Review】Decrypt Ptuning - 2023W32\|【LLM Review】Decrypt Ptuning - 2023W32]]
 - **ppt**
-	- [[010 outbox/ppt/【LLM Review】The stage review of LLM - 2023M9\|【LLM Review】The stage review of LLM - 2023M9]]
+	- [[010 outbox/ppt/【LLM Review】The stage review of LLM - PPT - 2023M9\|【LLM Review】The stage review of LLM - PPT - 2023M9]]
 - **AI**
 	- **LLM**
 		- [[030 PKV/AI/LLM/【LLM Review】LLM的问题及当前解决方案 - 2023M6\|【LLM Review】LLM的问题及当前解决方案 - 2023M6]]
 		- [[030 PKV/AI/LLM/【LLM Review】如何训练行业大模型 - 2023M8\|【LLM Review】如何训练行业大模型 - 2023M8]]
+		- [[030 PKV/AI/LLM/【大模型创意应用大赛】Chatsum智能秘书 - 提交贴\|【大模型创意应用大赛】Chatsum智能秘书 - 提交贴]]
+		- [[030 PKV/AI/LLM/Chatsum Tech Report\|Chatsum Tech Report]]
 		- **Paper**
 			- [[030 PKV/AI/LLM/Paper/【LLM Review】关于llama2 - 2023M7\|【LLM Review】关于llama2 - 2023M7]]
 	- **基础**
