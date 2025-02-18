@@ -50,3 +50,23 @@ Tokenizer对模型的效果、训练稳定性和模型推理性能影响很大�
 ## 5. Annealing
 这儿再着重介绍下WSD的decay即Annealing阶段，因为这么对提升模型最终效果至关重要。一般该阶段会训练更高质量的数据、合成数据或想着重增强的domain数据。
 实验发现，退火阶段的起始学习率如果过低，会显著影响模型的退火效果；而起始学习率如果超过一阶段衰减后的最终学习率，会在退火初期造成loss的剧烈上升和performance下降。因此，需要精心设计一阶段学习率衰减的幅度和退火阶段rewarmup的幅度（如果需要rewarmup的话）。
+
+### References
+Abdin, M. _et al._ (2024) ‘Phi-4 Technical Report’. arXiv. Available at: https://doi.org/10.48550/arXiv.2412.08905.
+Allen-Zhu, Z. and Li, Y. (2024) ‘Physics of language models: Part 3.3, knowledge capacity scaling laws’, _ArXiv e-prints_, abs/2404.05405.
+Aryabumi, V. _et al._ (2024) ‘To Code, or Not To Code? Exploring Impact of Code in Pre-training’. arXiv. Available at: http://arxiv.org/abs/2408.10914 (Accessed: 22 August 2024).
+Bai, Y. _et al._ (2022) ‘Constitutional AI: Harmlessness from AI Feedback’. Available at: http://arxiv.org/abs/2212.08073.
+Dai, D. _et al._ (2024) ‘DeepSeekMoE: Towards Ultimate Expert Specialization in Mixture-of-Experts Language Models’. arXiv. Available at: http://arxiv.org/abs/2401.06066 (Accessed: 20 February 2024).
+DeepSeek-AI _et al._ (2024) ‘DeepSeek LLM: Scaling Open-Source Language Models with Longtermism’. arXiv. Available at: https://doi.org/10.48550/arXiv.2401.02954.
+Dong, G. _et al._ (2024) ‘BaichuanSEED: Sharing the potential of ExtensivE data collection and deduplication by introducing a competitive large language model baseline’. Available at: https://arxiv.org/abs/2408.15079.
+Groeneveld, D. _et al._ (2024) ‘OLMo: Accelerating the Science of Language Models’. arXiv. Available at: http://arxiv.org/abs/2402.00838 (Accessed: 4 February 2024).
+Gupta, K. _et al._ (2023) ‘Continual Pre-Training of Large Language Models: How to (re)warm your model?’ arXiv. Available at: http://arxiv.org/abs/2308.04014 (Accessed: 25 April 2024).
+Hu, S. _et al._ (2024) ‘MiniCPM: Unveiling the Potential of Small Language Models with Scalable Training Strategies’. arXiv. Available at: http://arxiv.org/abs/2404.06395 (Accessed: 3 September 2024).
+Muennighoff, N. _et al._ (2024) _OLMoE: Open Mixture-of-Experts Language Models_, _arXiv.org_. Available at: https://arxiv.org/abs/2409.02060v1 (Accessed: 5 September 2024).
+Penedo, G. _et al._ (2024) ‘The FineWeb datasets: Decanting the web for the finest text data at scale’, in _The thirty-eight conference on neural information processing systems datasets and benchmarks track_. Available at: https://openreview.net/forum?id=n6SCkn2QaG.
+Shi, W. _et al._ (2023) ‘Detecting Pretraining Data from Large Language Models’. arXiv. Available at: http://arxiv.org/abs/2310.16789 (Accessed: 15 January 2024).
+Team, G. _et al._ (2024) ‘Gemma 2: Improving open language models at a practical size’. Available at: https://arxiv.org/abs/2408.00118.
+_The Llama 3 Herd of Models | Research - AI at Meta_ (no date). Available at: https://ai.meta.com/research/publications/the-llama-3-herd-of-models/ (Accessed: 24 July 2024).
+Wenzek, G. _et al._ (2020) ‘CCNet: Extracting high quality monolingual datasets from web crawl data’, in _Proceedings of the 12th language resources and evaluation conference_, pp. 4003–4012.
+Ye, T. _et al._ (2024) ‘Physics of Language Models: Part 2.1, Grade-School Math and the Hidden Reasoning Process’. arXiv. Available at: http://arxiv.org/abs/2407.20311 (Accessed: 5 December 2024).
+Zhou, F. _et al._ (2024) ‘Programming every example: Lifting pre-training data quality like experts at scale’. Available at: https://arxiv.org/abs/2409.17115.
