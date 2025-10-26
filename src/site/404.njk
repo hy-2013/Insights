@@ -3,15 +3,15 @@
 <html lang="en">
     <head>
         <title>Nothing here</title>
-        <link href="/styles/digital-garden-base.css" rel="stylesheet">
+        <link href="{{ '/styles/digital-garden-base.css' | url }}" rel="stylesheet">
         {%-if meta.themeStyle%}
-            <link href="/styles/obsidian-base.css" rel="stylesheet">
-    	    <link href="{{meta.themeStyle}}" rel="stylesheet">
+            <link href="{{ '/styles/obsidian-base.css' | url }}" rel="stylesheet">
+	    <link href="{{ meta.themeStyle | url }}" rel="stylesheet">
         {% else %}
-            <link href="/styles/style.css" rel="stylesheet">
+            <link href="{{ '/styles/style.css' | url }}" rel="stylesheet">
         {%endif%}
 
-        <link href="/styles/custom-style.css" rel="stylesheet">
+        <link href="{{ '/styles/custom-style.css' | url }}" rel="stylesheet">
         
     </head>
     <body class="theme-{{meta.baseTheme}} markdown-preview-view">
@@ -22,7 +22,7 @@
             {%endif%}
             <h1>There is nothing here</h1>
             <p>If you got here from a link, this note is probably not made public</p>
-            <a href="/">Go back home</a>
+            <a href="{{ '/' | url }}">Go back home</a>
         </div>
     </body>
 </html>

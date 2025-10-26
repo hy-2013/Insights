@@ -19,17 +19,17 @@
 <script src="https://fastly.jsdelivr.net/npm/whatwg-fetch@3.6.2/dist/fetch.umd.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<link href="/styles/digital-garden-base.css" rel="stylesheet">
+<link href="{{ '/styles/digital-garden-base.css' | url }}" rel="stylesheet">
 {%-if meta.themeStyle%}
-    <link href="/styles/obsidian-base.css" rel="stylesheet">
-    <link href="{{meta.themeStyle}}" rel="stylesheet">
+    <link href="{{ '/styles/obsidian-base.css' | url }}" rel="stylesheet">
+    <link href="{{ meta.themeStyle | url }}" rel="stylesheet">
 {% else %}
-    <link href="/styles/style.css" rel="stylesheet">
+    <link href="{{ '/styles/style.css' | url }}" rel="stylesheet">
 {%endif%}
 
-<link href="/styles/custom-style.css" rel="stylesheet">
+<link href="{{ '/styles/custom-style.css' | url }}" rel="stylesheet">
 {%- for style in dynamics.styles -%}
-<link href="{{style}}" rel="stylesheet">
+<link href="{{ style | url }}" rel="stylesheet">
 {%- endfor -%}
 
 {% favicons './src/site/favicon.svg', appleIconBgColor='#123' %}

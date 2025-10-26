@@ -6,7 +6,7 @@
             {%- for note in collections.versionednote -%}
                 {%- if note.data.item.title === page.fileSlug -%}
                     <li style="padding:10px">
-                        <a href="{{ note.url }}">
+                        <a href="{{ note.url | url }}">
                             {{note.data.item.date}}</a>
                     </li>
                 {%- endif -%}

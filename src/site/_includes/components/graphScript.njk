@@ -1,6 +1,22 @@
 <script>
+    const pathPrefix = "{{ '/' | url }}".replace(/\/$/, "");
+    const graphJsonUrl = '{{ "/graph.json" | url }}';
+
+    function withPrefix(path) {
+        if (!path || !path.startsWith('/')) {
+            return path;
+        }
+        if (!pathPrefix) {
+            return path;
+        }
+        if (path === '/') {
+            return `${pathPrefix}/`;
+        }
+        return `${pathPrefix}${path}`;
+    }
+
     async function fetchGraphData() {
-        const graphData = await fetch('/graph.json').then(res => res.json());
+        const graphData = await fetch(graphJsonUrl).then(res => res.json());
         const fullGraphData  = filterFullGraphData(graphData);
         return {graphData, fullGraphData}
     }
@@ -26,7 +42,17 @@
         }
         let remaining = JSON.parse(JSON.stringify(graphData.nodes));
         let links = JSON.parse(JSON.stringify(graphData.links));
-        let currentLink = decodeURI(window.location.pathname);
+        const currentPath = decodeURI(window.location.pathname);
+        let currentLink = currentPath;
+        if (pathPrefix && currentLink.startsWith(pathPrefix)) {
+            currentLink = currentLink.slice(pathPrefix.length);
+            if (currentLink[0] !== '/') {
+                currentLink = `/${currentLink}`;
+            }
+        }
+        if (!currentLink) {
+            currentLink = '/';
+        }
         let currentNode = remaining[currentLink] || Object.values(remaining).find((v) => v.home);
         delete remaining[currentNode.url];
         if (!currentNode.home) {
@@ -129,7 +155,7 @@
                 ctx.fillText(label, node.x, node.y + nodeR + 2);
             })
             .onNodeClick(node => {
-                window.location = node.url;
+                window.location = withPrefix(node.url);
             })
             .onNodeHover(node => {
                 highlightNodes.clear();

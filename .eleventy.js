@@ -8,6 +8,38 @@ const { parse } = require("node-html-parser");
 const htmlMinifier = require("html-minifier");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 
+const DEFAULT_PATH_PREFIX = "/Insights";
+
+function sanitizePathPrefix(prefix) {
+  if (!prefix || prefix === "/") {
+    return "/";
+  }
+  const normalized = prefix.trim().replace(/^\/+/, "").replace(/\/+$/, "");
+  return `/${normalized}`;
+}
+
+function applyPathPrefix(pathPrefix, href) {
+  if (!href || !href.startsWith("/")) {
+    return href;
+  }
+  if (pathPrefix === "/") {
+    return href;
+  }
+  if (href === "/") {
+    return `${pathPrefix}/`;
+  }
+  return `${pathPrefix}${href}`;
+}
+
+function resolveOptimizedUrlPath() {
+  const envPrefix = process.env.PATH_PREFIX || "";
+  if (envPrefix && envPrefix !== "/") {
+    const normalized = envPrefix.replace(/\/$/, "");
+    return `${normalized}/img/optimized`;
+  }
+  return "/img/optimized";
+}
+
 const { headerToId, namedHeadingsFilter } = require("./src/helpers/utils");
 const {
   userMarkdownSetup,
@@ -20,7 +52,7 @@ function transformImage(src, cls, alt, sizes, widths = ["500", "700", "auto"]) {
     widths: widths,
     formats: ["webp", "jpeg"],
     outputDir: "./dist/img/optimized",
-    urlPath: "/img/optimized",
+    urlPath: resolveOptimizedUrlPath(),
   };
 
   // generate images, while this is async we don’t wait
@@ -32,6 +64,13 @@ function transformImage(src, cls, alt, sizes, widths = ["500", "700", "auto"]) {
 const tagRegex = /(^|\s|\>)(#[^\s!@#$%^&*()=+\.,\[{\]};:'"?><]+)(?!([^<]*>))/g;
 
 module.exports = function (eleventyConfig) {
+  const isProd = process.env.ELEVENTY_ENV === "prod";
+  const rawPathPrefix =
+    process.env.PATH_PREFIX || (isProd ? DEFAULT_PATH_PREFIX : "/");
+  const pathPrefix = sanitizePathPrefix(rawPathPrefix);
+  process.env.PATH_PREFIX = pathPrefix === "/" ? "" : pathPrefix;
+  const withPathPrefix = (href) => applyPathPrefix(pathPrefix, href);
+
   eleventyConfig.setLiquidOptions({
     dynamicPartials: true,
   });
@@ -247,9 +286,16 @@ module.exports = function (eleventyConfig) {
         }
 
         if(deadLink){
-          return `<a class="internal-link is-unresolved" href="/404">${title}</a>`;
+          return `<a class="internal-link is-unresolved" href="${withPathPrefix(
+            "/404"
+          )}">${title}</a>`;
         }
-        return `<a class="internal-link" data-note-icon="${noteIcon}" href="${permalink}${headerLinkPath}">${title}</a>`;
+        let resolvedPermalink = permalink;
+        if (resolvedPermalink && resolvedPermalink.startsWith("/")) {
+          resolvedPermalink = withPathPrefix(resolvedPermalink);
+        }
+        const href = `${resolvedPermalink}${headerLinkPath}`;
+        return `<a class="internal-link" data-note-icon="${noteIcon}" href="${href}">${title}</a>`;
       })
     );
   });
@@ -487,6 +533,7 @@ module.exports = function (eleventyConfig) {
   userEleventySetup(eleventyConfig);
 
   return {
+    pathPrefix,
     dir: {
       input: "src/site",
       output: "dist",
