@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/010 outbox/【LLM Review】Pretrain的一些实践经验 - 2025-M2/","tags":["LLM/Pretrain"]}
+{"dg-publish":true,"permalink":"/010 outbox/【LLM Review】Pretrain的一些实践经验 - 2025-M2/","tags":["#LLM/Pretrain"]}
 ---
 
 ## TLDR
@@ -51,7 +51,7 @@ Tokenizer对模型的效果、训练稳定性和模型推理性能影响很大�
 这儿再着重介绍下WSD的decay即Annealing阶段，因为这么对提升模型最终效果至关重要。一般该阶段会训练更高质量的数据、合成数据或想着重增强的domain数据。
 实验发现，退火阶段的起始学习率如果过低，会显著影响模型的退火效果；而起始学习率如果超过一阶段衰减后的最终学习率，会在退火初期造成loss的剧烈上升和performance下降。因此，需要精心设计一阶段学习率衰减的幅度和退火阶段rewarmup的幅度（如果需要rewarmup的话）。
 
-### References
+## References
 Abdin, M. _et al._ (2024) ‘Phi-4 Technical Report’. arXiv. Available at: https://doi.org/10.48550/arXiv.2412.08905.
 Allen-Zhu, Z. and Li, Y. (2024) ‘Physics of language models: Part 3.3, knowledge capacity scaling laws’, _ArXiv e-prints_, abs/2404.05405.
 Aryabumi, V. _et al._ (2024) ‘To Code, or Not To Code? Exploring Impact of Code in Pre-training’. arXiv. Available at: http://arxiv.org/abs/2408.10914 (Accessed: 22 August 2024).

@@ -7,7 +7,7 @@
 
 ## 1. 总结
 
-ptuning 是介于prompt engineer和Full FT之间的一种方案，目的是希望用少量训练成本，优化Handcrafted prompt效果，接近Full FT效果，具体效果和model size和task有关，整体看有一定实践价值。
+ptuning 是介于prompt engineer和Full FT之间的一种方案，目的是希望用少量训练成本（需要训练数据和显存更少）和更少的下游task模型存储，优化Handcrafted prompt效果，接近Full FT效果，具体效果和model size和task有关，整体看有一定实践价值。
 
 ## 2. ptuning、prompt tuning和prefix tuning的区别
 

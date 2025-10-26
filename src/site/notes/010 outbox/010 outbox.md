@@ -14,7 +14,7 @@
 		- [[030 PKV/AI/LLM/【大模型创意应用大赛】Chatsum智能秘书 - 提交贴\|【大模型创意应用大赛】Chatsum智能秘书 - 提交贴]]
 		- [[030 PKV/AI/LLM/Chatsum Tech Report\|Chatsum Tech Report]]
 		- **Paper**
-			- [[030 PKV/AI/LLM/Paper/【LLM Review】关于llama2 - 2023M7\|【LLM Review】关于llama2 - 2023M7]]
+			- [[040 Plan/Phoenix/LLM Pretrain\|LLM Pretrain]]
 	- **基础**
 		- [[030 PKV/AI/基础/【ML基础】FTRL原理介绍与工程实践 - 2017M5\|【ML基础】FTRL原理介绍与工程实践 - 2017M5]]
 		- [[030 PKV/AI/基础/【ML基础】从特征组合及其权重的角度对常用模型做统一解释 - 2022H1\|【ML基础】从特征组合及其权重的角度对常用模型做统一解释 - 2022H1]]

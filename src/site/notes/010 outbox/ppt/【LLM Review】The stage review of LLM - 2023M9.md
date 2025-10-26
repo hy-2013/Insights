@@ -2,7 +2,6 @@
 {"dg-publish":true,"permalink":"/010 outbox/ppt/【LLM Review】The stage review of LLM - 2023M9/"}
 ---
 
-
 ## TLDR
 
 在我看来，当前LLM面临的主要问题包括：1. 准确性，2. 高成本，3. 专业性，4. 时效性，5. 安全性。本文试图从这5个方面逐一介绍针对这些问题的主流解法，尤其是准确性和高成本这两个最核心问题。
@@ -14,10 +13,10 @@
 1. 无训练成本
 	1. prompt engineering：更好的从LLM中取出知识
 		1. **System prompt + ICL + COT**
-			1. ![Pasted image 20230903163648.png](/img/user/990%20Attachment/Pasted%20image%2020230903163648.png)
+			1. ![Pasted image 20230903163648|300](https://raw.githubusercontent.com/hy-2013/Insights/main/src/site/img/user/990%20AttachmentPasted%20image%2020230903163648.png)
 		2. **限定回答范围：[guidance](https://github.com/guidance-ai/guidance)**
-			1. ![Pasted image 20230903162854.png](/img/user/990%20Attachment/Pasted%20image%2020230903162854.png)
-			2. ![Pasted image 20230903163124.png](/img/user/990%20Attachment/Pasted%20image%2020230903163124.png)
+			1. ![Pasted image 20230903162854|300](https://raw.githubusercontent.com/hy-2013/Insights/main/src/site/img/user/990%20AttachmentPasted%20image%2020230903162854.png)
+			2. ![Pasted image 20230903163124|300](https://raw.githubusercontent.com/hy-2013/Insights/main/src/site/img/user/990%20AttachmentPasted%20image%2020230903163124.png)
 
 		3. **Retrieval augumented（RAG）**
 			1. 基于检索返回的内容做回答：ChatXX，如ChatDoc、chatpdf等
@@ -31,13 +30,13 @@
 			3. bing-like：通用全网搜索+大搜系统检索能力+轮询多次+Quote
 				1. [perplexity.ai](www.perplexity.ai/)
 				2. [Google Search Labs](https://labs.google.com/search)
-	2. [**Function Call](https://platform.openai.com/docs/guides/gpt/function-calling) + Plugins**：主动或被动的借助外部tools
-		1. ![Pasted image 20230904021655.png](/img/user/990%20Attachment/Pasted%20image%2020230904021655.png)
+	2. **[Function Call](https://platform.openai.com/docs/guides/gpt/function-calling) + Plugins**：主动或被动的借助外部tools
+		1. ![Pasted image 20230904021655|300](https://raw.githubusercontent.com/hy-2013/Insights/main/src/site/img/user/990%20AttachmentPasted%20image%2020230904021655.png)
 	3. **Ensemble/Bagging**
 		1. 多个答案bagging(CoT-SC)、输入多个prompt bagging、Ensemble refinement（Med-Palm2）
 	4. **Reflection/System2**：像人类一样非线性思考问题、reasoning、planning
 		1. ReAct、ToT
-			1. ![Pasted image 20230905224819.png](/img/user/990%20Attachment/Pasted%20image%2020230905224819.png)
+			1. ![Pasted image 20230905224819|300](https://raw.githubusercontent.com/hy-2013/Insights/main/src/site/img/user/990%20AttachmentPasted%20image%2020230905224819.png)
 2. **有训练成本：**
 	1. SFT：alignment调教
 		1. 作用：terse（shorten token）、set a given language、consistently format responses、custom tone，augment context windows
@@ -54,11 +53,12 @@
 2. 推理成本：未来更重要
 	1. 算法
 		1. KD、MOE、RetNet
-		2. Paged attention
+		2. Paged attention（vLLM）
 		3. Speculative decoding：较小模型生成，较大模型挑选，异步并发
 	2. 框架或硬件：
-		1. FlashAttention、[Continuous batching](https://www.usenix.org/system/files/osdi22-yu.pdf)
-		2. AMD Radeon series + ROCm、FPGA
+		1. FlashAttention（显存优化）、[Continuous batching](https://www.usenix.org/system/files/osdi22-yu.pdf)（调度优化）
+		2. Tensor-LLM、Mojo？
+		3. AMD Radeon series + ROCm、FPGA？
 
 ## 3. 专业性 优化
 
@@ -74,7 +74,7 @@
 	3. 教育：MathGPT
 	4. 法律：Chatlaw（推荐读paper）
 	5. 心理咨询：扁鹊
-![Pasted image 20230906145153.png](/img/user/990%20Attachment/Pasted%20image%2020230906145153.png)
+![Pasted image 20230906145153|300](https://raw.githubusercontent.com/hy-2013/Insights/main/src/site/img/user/990%20AttachmentPasted%20image%2020230906145153.png)
 
 
 ## 4. 时效性 拥有
@@ -93,4 +93,4 @@
 2. 闭源大模型能力会持续领先开源界吗？
 3. 大模型的未来研究方向有哪些？
 
-说明：本文源自前段时间的一次部门内分享，因为是PPT形式，所以多数内容点到为止，没有展开。
+说明：本文源自前段时间的一次部门内分享，因为是PPT形式，所以多数内容点到为止，没有展开，欢迎进一步交流。

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/030 PKV/AI/LLM/【大模型创意应用大赛】Chatsum智能秘书 - 提交贴/","tags":["LLM"]}
+{"dg-publish":true,"permalink":"/030 PKV/AI/LLM/【大模型创意应用大赛】Chatsum智能秘书 - 提交贴/","tags":["#LLM"]}
 ---
 
 ## 一、实际组队情况
@@ -18,24 +18,27 @@
 
 2. Web App
 ![Pasted image 20231015160007|600](https://raw.githubusercontent.com/hy-2013/Insights/main/src/site/img/user/990%20AttachmentPasted%20image%2020231015160007.png)
-体验链接（无需注册）：[Web App](http://10.191.74.228:8060)。demo case见附录。
+体验链接：[Web App](http://10.191.74.228:8060)。demo case见附录。
+> 用户名：设置为6-12位字母+数字（不能以数字开头），注意不要与他人分享
+> 密码：随便填一个，不校验（但是必须要填一个）
 
-3. 归总报告可视化
+1. 归总报告可视化
 ![Pasted image 20231015160121|600](https://raw.githubusercontent.com/hy-2013/Insights/main/src/site/img/user/990%20AttachmentPasted%20image%2020231015160121.png)
 ### 2.2 Chatsum功能
 1. 已实现功能
 	1. DChat群消息自动总结、归整、xmind式结构化展示和每日报告生成
-		1. 支持任意条数的chat消息：虽然我们基于langchain做了优化，但受限模型Context能力，目前50条及以内的效果最佳，可做到接近Chatgpt3.5的效果（详细评测见[[030 PKV/AI/LLM/Chatsum Tech Report\|Chatsum Tech Report]]）。
+		1. 支持任意条数的chat消息：虽然我们基于langchain做了优化，但受限模型Context能力，目前50条及以内的效果最佳，可做到接近Chatgpt3.5的效果（详细评测我们后续会以《Chatsum Tech Report》发出）。
 	2. Chat式Web Summary应用构建
 	3. 基于Modehub训练的Chatsum基座模型
 2. 规划实现功能
-	1. 业务知识问答：用户可以通过chat方式，直接获取基于RAG（way社区文章、wiki等）和Chatsum大模型生成的答案，甚至直接基于聊天记录和相关文档直接生成PRD。
-	2. Workflow提效和项目管理自动化：
+	1. Chat中的表情符号、链接文档、图片等信息识别和抽取
+	2. 业务知识问答：用户可以通过chat方式，直接获取基于RAG（way社区文章、wiki等）和Chatsum大模型生成的答案，甚至直接基于聊天记录和相关文档直接生成PRD等。
+	3. Workflow提效和项目管理自动化：
 		1. 代办列表生成
 		2. 重要事件生成
 		3. Dealine提醒
 		4. 会议纪要
-	3. Agent智能秘书：自主「沟通」，与其他Agent联动自主或半自主的「完成工作内容」。
+	4. Agent智能秘书：自主「沟通」，与其他Agent联动自主或半自主的「完成工作内容」。
 ### 2.3 Chatsum架构和执行流
 1. 架构图
 ![Pasted image 20231015155535|600](https://raw.githubusercontent.com/hy-2013/Insights/main/src/site/img/user/990%20AttachmentPasted%20image%2020231015155535.png)
