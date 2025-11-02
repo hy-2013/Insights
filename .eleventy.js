@@ -1,12 +1,11 @@
 const slugify = require("@sindresorhus/slugify");
 const markdownIt = require("markdown-it");
-const fs = require("fs");
-const matter = require("gray-matter");
 const faviconsPlugin = require("eleventy-plugin-gen-favicons");
 const tocPlugin = require("eleventy-plugin-nesting-toc");
 const { parse } = require("node-html-parser");
 const htmlMinifier = require("html-minifier-terser");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
+const { resolveByLink } = require("./src/helpers/articleId");
 
 const { headerToId, namedHeadingsFilter } = require("./src/helpers/utils");
 const {
@@ -30,7 +29,7 @@ function transformImage(src, cls, alt, sizes, widths = ["500", "700", "auto"]) {
 }
 
 function getAnchorLink(filePath, linkTitle) {
-  const {attributes, innerHTML} = getAnchorAttributes(filePath, linkTitle);
+  const { attributes, innerHTML } = getAnchorAttributes(filePath, linkTitle);
   return `<a ${Object.keys(attributes).map(key => `${key}="${attributes[key]}"`).join(" ")}>${innerHTML}</a>`;
 }
 
@@ -284,7 +283,34 @@ module.exports = function (eleventyConfig) {
         }
         const [fileLink, linkTitle] = p1.split("|");
 
-        return getAnchorLink(fileLink, linkTitle);
+        let fileName = fileLink.replaceAll("&amp;", "&");
+        let header = "";
+        let headerLinkPath = "";
+        if (fileLink.includes("#")) {
+          [fileName, header] = fileLink.split("#");
+          headerLinkPath = `#${headerToId(header)}`;
+        }
+
+        let permalink = "";
+        let noteIcon = process.env.NOTE_ICON_DEFAULT;
+        const title = linkTitle ? linkTitle : fileName;
+        const meta = resolveByLink(fileName);
+
+        if (!meta) {
+          return `<a class="internal-link is-unresolved" href="${withPathPrefix(
+            "/404"
+          )}">${title}</a>`;
+        }
+        permalink = meta.permalink;
+        if (meta.noteIcon) {
+          noteIcon = meta.noteIcon;
+        }
+        let resolvedPermalink = permalink;
+        if (resolvedPermalink && resolvedPermalink.startsWith("/")) {
+          resolvedPermalink = withPathPrefix(resolvedPermalink);
+        }
+        const href = `${resolvedPermalink}${headerLinkPath}`;
+        return `<a class="internal-link" data-note-icon="${noteIcon}" href="${href}">${title}</a>`;
       })
     );
   });
@@ -329,7 +355,7 @@ module.exports = function (eleventyConfig) {
     for (const dataViewJsLink of parsed.querySelectorAll("a[data-href].internal-link")) {
       const notePath = dataViewJsLink.getAttribute("data-href");
       const title = dataViewJsLink.innerHTML;
-      const {attributes, innerHTML} = getAnchorAttributes(notePath, title);
+      const { attributes, innerHTML } = getAnchorAttributes(notePath, title);
       for (const key in attributes) {
         dataViewJsLink.setAttribute(key, attributes[key]);
       }
@@ -445,7 +471,7 @@ module.exports = function (eleventyConfig) {
 
 
   eleventyConfig.addTransform("picture", function (str) {
-    if(process.env.USE_FULL_RESOLUTION_IMAGES === "true"){
+    if (process.env.USE_FULL_RESOLUTION_IMAGES === "true") {
       return str;
     }
     const parsed = parse(str);
@@ -538,7 +564,7 @@ module.exports = function (eleventyConfig) {
       return "";
     }
   });
-  
+
   eleventyConfig.addFilter("jsonify", function (variable) {
     return JSON.stringify(variable) || '""';
   });

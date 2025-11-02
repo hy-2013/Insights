@@ -1,6 +1,8 @@
 require("dotenv").config();
 const settings = require("../../helpers/constants");
 
+const { registerFromData } = require("../../helpers/articleId");
+
 const allSettings = settings.ALL_NOTE_SETTINGS;
 
 module.exports = {
@@ -11,11 +13,13 @@ module.exports = {
       }
       return "layouts/note.njk";
     },
+    articleId: (data) => {
+      const meta = registerFromData(data);
+      return meta ? meta.articleId : undefined;
+    },
     permalink: (data) => {
-      if (data.tags.indexOf("gardenEntry") != -1) {
-        return "/";
-      }
-      return data.permalink || undefined;
+      const meta = registerFromData(data);
+      return meta ? meta.permalink : data.permalink;
     },
     settings: (data) => {
       const noteSettings = {};

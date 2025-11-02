@@ -58,6 +58,10 @@ function getGraph(data) {
       hide: v.data.hideInGraph || false,
     };
     stemURLs[fpath] = v.url;
+    if (v.data && v.data.articleId) {
+      stemURLs[v.data.articleId] = v.url;
+      stemURLs[`${v.data.articleId}/`] = v.url;
+    }
     if (
       v.data["dg-home"] ||
       (v.data.tags && v.data.tags.indexOf("gardenEntry") > -1)
@@ -68,7 +72,11 @@ function getGraph(data) {
   Object.values(nodes).forEach((node) => {
     let outBound = new Set();
     node.outBound.forEach((olink) => {
-      let link = (stemURLs[olink] || olink).split("#")[0];
+      let resolved = (stemURLs[olink] || olink).split("#")[0];
+      if (resolved && !resolved.startsWith("/")) {
+        resolved = `/${resolved}`;
+      }
+      const link = resolved;
       outBound.add(link);
     });
     node.outBound = Array.from(outBound);

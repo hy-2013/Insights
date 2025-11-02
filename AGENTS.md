@@ -22,6 +22,11 @@
 - Nunjucks 模板保持语义化标签与 2 空格缩进；Sass 使用 BEM 类命名，变量与 mixin 以 `kebab-case` 表示。
 - 配置文件与脚本需说明关键环境变量，示例放在 `.env.example`。
 
+## Content Linking & URLs
+- 所有笔记的公开链接格式为 `/<article_id>/`，其中 `article_id` 为笔记在 `src/site/notes/` 内相对路径的 SHA-256 前 10 位十六进制字符串；仅 `gardenEntry` 或 `dg-home` 标签的页面保留 `/` 根路径。
+- 内部引用（如 `[[...]]`、文件树、图谱、搜索）依赖 `src/helpers/articleId.js` 注册的映射，请勿手动填写长路径或硬编码旧的 `/notes/...` 链接。
+- 若新增构建脚本或数据处理流程，需确保调用 `registerFromData`（或等效逻辑）以同步更新文章映射，避免链接失效。
+
 ## Testing Guidelines
 - 尚无预置测试框架；新增功能或修复缺陷时，请先于仓库根目录创建/扩展 `test/`，编写可复现问题的回归测试（推荐 `pytest` 处理数据校验，或 Node 驱动的集成测试）。
 - 命名规则：`test_<feature>_<scenario>.py` 或等价的 JS 测试文件；测试前运行 `npm run build` 以生成真实输入。
