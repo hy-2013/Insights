@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/010 outbox/【AI】Andrej Karpathy — “We’re summoning ghosts, not building animals”-2025-M10/","tags":["LLM"]}
+{"dg-publish":true,"permalink":"/010 outbox/【AI】Andrej Karpathy — “We’re summoning ghosts, not building animals”-2025-M10/"}
 ---
 
 
@@ -18,7 +18,7 @@
 - Andrej Karpathy认为**“agents”的成熟将是一个十年的工程而非一年的冲刺**，关键欠缺在于**continual learning、长时记忆蒸馏、真正的多模态与可靠的电脑使用**等能力。
 - 他主张预训练更像“crappy evolution”（实用但粗糙的演化）：先用互联网模仿把智能“引导”起来，再逐步去除记忆，保留“**cognitive core**”。
 - 他对RL持批判态度，称其在复杂任务上是“高方差、吸管监督”；更看好过程监督、反思与合成数据，以及多智能体的文化与自博弈。
-- 自我定位为工程务实派：反对过度预测与“筹资叙事”，强调“build the code”的学习方法与教育愿景（Eureka，“Starfleet Academy”）。
+- 自我定位为工程务实派：反对过度预测与“筹资叙事”，强调**“build the code”的学习方法与教育**愿景（Eureka，“Starfleet Academy”）。
 - 非共识亮点：
   - **“Reinforcement learning is terrible”**且目前的RL“sucks supervision through a straw”。
   - **我们不是在造动物，我们在造‘ghosts’**（纯数字、模仿人类的智能）。
