@@ -74,4 +74,3 @@ npm install -g @openai/codex@latest
 | `codex resume --last` | `claude --continue` 恢复最近一次对话         |
 | `codex resume <id>`   | `claude -r <id>` 指定会话 ID 继续          |
 ![Pasted image 20251005193438.png](/img/user/990%20Attachment/Pasted%20image%2020251005193438.png)
-

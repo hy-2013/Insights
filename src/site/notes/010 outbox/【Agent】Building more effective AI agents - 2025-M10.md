@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/010 outbox/【Agent】Building more effective AI agents - 2025-M10/","tags":["#LLM/Agent"]}
+{"dg-publish":true,"permalink":"/010 outbox/【Agent】Building more effective AI agents - 2025-M10/","tags":["LLM/Agent"]}
 ---
 
 
@@ -13,7 +13,6 @@
 - 覆盖时长：00:03:09
 - 识别说话人：A, B, C
 
-## 模型总结
 ## 摘要
 - Eric强调：**multi-agent 作为 test time compute** 能显著提升答案质量，多个 Claude 协作往往优于单一实例。
 - 团队通过开放式任务与大量 RL 训练，让 Claude“练习做 agent”，不仅在 coding 强，还能把能力外溢到 search、规划等广泛场景；**“先在最难的 coding 上练到极致，其他任务就会变得更容易。”**

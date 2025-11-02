@@ -13,7 +13,6 @@
 - 覆盖时长：01:14:20
 - 识别说话人：@, A, B, C, D
 
-## 模型总结
 ## 摘要
 - 本期对话围绕微软—OpenAI最新“结构性重组”与长期合作展开：非营利“OpenAI Foundation”一举持有约$130B OpenAI股权，首次$25B聚焦health与AI security/resilience；商业层由PBC承载融资和规模化。
 - 独家条款明确化：OpenAI将在Azure上独家提供“stateless APIs”（至2030），其余产品（含agents、开源模型、Sora、wearables等）可多平台分发；存在长期rev share直到2032或AGI被验证为止。

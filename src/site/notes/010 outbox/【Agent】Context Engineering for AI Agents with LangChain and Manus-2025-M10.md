@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/010 outbox/【Agent】Context Engineering for AI Agents with LangChain and Manus-2025-M10/","tags":["#LLM/Agent"]}
+{"dg-publish":true,"permalink":"/010 outbox/【Agent】Context Engineering for AI Agents with LangChain and Manus-2025-M10/","tags":["LLM/Agent"]}
 ---
 
 
@@ -13,7 +13,6 @@
 - 覆盖时长：01:00:39
 - 识别说话人：A, B, C
 
-## 模型总结
 ## 摘要
 这是一场由 LangChain 的 Lance 与 Manus 的 Pete 共同主持的 webinar，主题聚焦在 context engineering 的最新实战与非共识经验。核心张力在于：agent 因工具调用带来的长上下文增长与模型性能随上下文长度增加而下降的“上下文悖论”。Manus 的实践提出“**可逆压缩(compaction)优先、结构化不可逆摘要(summarization)兜底、分层动作空间(offload 工具本身)、多 agent 的通信/共享记忆模式选择**”等系统化方法。最重要的体会是：**最大的跃迁来自简化而非堆叠技巧——build less, understand more**。
 

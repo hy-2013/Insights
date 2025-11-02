@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/010 outbox/【AI】Andrej Karpathy — “We’re summoning ghosts, not building animals”-2025-M10/"}
+{"dg-publish":true,"permalink":"/010 outbox/【AI】Andrej Karpathy — “We’re summoning ghosts, not building animals”-2025-M10/","tags":["LLM"]}
 ---
 
 
@@ -13,7 +13,6 @@
 - 覆盖时长：02:26:06
 - 识别说话人：A, B, C, D, E, F
 
-## 模型总结
 ## 摘要：
 - Andrej Karpathy认为**“agents”的成熟将是一个十年的工程而非一年的冲刺**，关键欠缺在于**continual learning、长时记忆蒸馏、真正的多模态与可靠的电脑使用**等能力。
 - 他主张预训练更像“crappy evolution”（实用但粗糙的演化）：先用互联网模仿把智能“引导”起来，再逐步去除记忆，保留“**cognitive core**”。
