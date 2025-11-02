@@ -149,7 +149,7 @@
             }        
         }
         if(shouldFetch){
-            let docs = await (await fetch('{{ "/searchIndex.json" | url }}?v={{meta.buildDate|isoDate}}')).json();
+            let docs = await(await fetch('/searchIndex.json?v={{meta.buildDate|isoDate}}')).json();
             let index = createIndex(docs);
             localStorage.setItem("searchIndex", JSON.stringify({date: '{{meta.buildDate|isoDate}}', docs}));
             window.docs = docs
