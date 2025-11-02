@@ -22,6 +22,13 @@
 - Nunjucks 模板保持语义化标签与 2 空格缩进；Sass 使用 BEM 类命名，变量与 mixin 以 `kebab-case` 表示。
 - 配置文件与脚本需说明关键环境变量，示例放在 `.env.example`。
 
+## Layout & Styling Notes
+- 主页与笔记共用基于 `.page-layout__grid` 的三列布局：依次为 `.page-layout__nav`、`.page-layout__content`、`.page-layout__aside`；容器宽度与列间距已调至高利用率（中栏 960px、列距 1.1–1.6rem），请勿随意增加大型外边距。
+- 顶部导航统一通过 `.site-header` 呈现，侧边补充信息请放入 `.nav-panel` 或 `components/sidebar.njk`。默认仅保留 `Table Of Contents` 模块，`Connected Pages` 与反向链接卡片已下线，如需恢复请自定义实现。
+- 所有自定义样式集中在 `src/site/styles/custom-style.scss`，修改前先检查是否需要同步更新相关模板；避免回退到 `style.scss` 以免被上游主题覆盖。
+- 布局改动需运行 `pytest test/test_layout_structure.py` 校验首页结构是否符合预期。
+- 全局容器 `.page-layout` 左、右、顶部均为 0 padding/0 margin，仅保留底部 padding；如需留白请在内部组件设置，勿改动外层。
+
 ## Content Linking & URLs
 - 所有笔记的公开链接格式为 `/<article_id>/`，其中 `article_id` 为笔记在 `src/site/notes/` 内相对路径的 SHA-256 前 10 位十六进制字符串；仅 `gardenEntry` 或 `dg-home` 标签的页面保留 `/` 根路径。
 - 内部引用（如 `[[...]]`、文件树、图谱、搜索）依赖 `src/helpers/articleId.js` 注册的映射，请勿手动填写长路径或硬编码旧的 `/notes/...` 链接。

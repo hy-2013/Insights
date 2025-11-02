@@ -10,71 +10,102 @@
       {% include imp %}
     {% endfor %}
   </head>
-  <body class="theme-{{meta.baseTheme}} markdown-preview-view markdown-rendered markdown-preview-section {{meta.bodyClasses}}">
-    {%include "components/notegrowthhistory.njk"%}
-    
-    {% if settings.dgShowFileTree !== true %}
-      {%include "components/navbar.njk"%}
-    {%else%}
-      {%include "components/filetree.njk"%}
+  {% set navigation %}
+    {% if settings.dgShowFileTree === true %}
+      {% include "components/filetree.njk" %}
+    {% else %}
+      {% include "components/navbar.njk" %}
     {% endif %}
+  {% endset %}
+
+  {% set sidebarContent %}
+    {% if settings.dgShowBacklinks === true or settings.dgShowLocalGraph === true or settings.dgShowToc === true%}
+      {% include "components/sidebar.njk" %}
+    {% endif %}
+  {% endset %}
+
+  <body class="theme-{{meta.baseTheme}} markdown-preview-view markdown-rendered markdown-preview-section {{meta.bodyClasses}}">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="site-header__brand" href="{{ '/' | url }}">{{ meta.siteName }}</a>
+        {% if settings.dgEnableSearch === true %}
+          {% include "components/searchButton.njk" %}
+        {% endif %}
+      </div>
+    </header>
+
+    <div class="page-layout">
+      <div class="page-layout__grid">
+        <aside class="page-layout__nav">
+          {% if navigation | trim %}
+            {{ navigation | safe }}
+          {% else %}
+            <div class="nav-placeholder" aria-hidden="true"></div>
+          {% endif %}
+        </aside>
+
+        <main class="page-layout__content content cm-s-obsidian {{contentClasses}}">
+          <header class="content-header">
+            {% if settings.dgShowInlineTitle === true %}
+              <h1 data-note-icon="{% if noteIcon %}{{noteIcon}}{% else %}{{meta.noteIconsSettings.default}}{% endif %}">{% if title %}{{ title }}{% else %}{{ page.fileSlug }}{% endif %}</h1>
+            {% endif %}
+            <div class="header-meta">
+              {% if settings.dgShowTags === true and tags %}
+                <div class="header-tags">
+                  {% for tag in tags %}
+                    {% if tag != 'gardenEntry' and tag !='note' %}
+                      <a class="tag" onclick="toggleTagSearch(this)">
+                        #{{tag}}
+                      </a>
+                    {% endif %}
+                  {% endfor %}
+                </div>
+              {% endif %}
+              {%- if meta.timestampSettings.showCreated or meta.timestampSettings.showUpdated -%}
+              <div class="timestamps">
+                {%- if meta.timestampSettings.showCreated and created -%}
+                <div><i icon-name="calendar-plus"></i> <span class="human-date" data-date="{{created}}"></span></div>
+                {%- endif -%}
+                {%- if meta.timestampSettings.showUpdated and updated -%}
+                <div><i icon-name="calendar-clock"></i> <span class="human-date" data-date="{{updated}}"></span></div>
+                {%- endif -%}
+              </div>
+              {%- endif -%}
+            </div>
+          {% for imp in dynamics.common.header %}
+            {% include imp %}
+          {% endfor %}
+          {% for imp in dynamics.notes.header %}
+            {% include imp %}
+          {% endfor %}
+          </header>
+          {% for imp in dynamics.common.beforeContent %}
+            {% include imp %}
+          {% endfor %}
+          {% for imp in dynamics.notes.beforeContent %}
+            {% include imp %}
+          {% endfor %}
+          {{ content | hideDataview | taggify | link | safe}}
+          {% for imp in dynamics.common.afterContent %}
+            {% include imp %}
+          {% endfor %}
+          {% for imp in dynamics.notes.afterContent %}
+            {% include imp %}
+          {% endfor %}
+        </main>
+
+        <aside class="page-layout__aside">
+          {% if sidebarContent | trim %}
+            {{ sidebarContent | safe }}
+          {% else %}
+            <div class="aside-placeholder" aria-hidden="true"></div>
+          {% endif %}
+        </aside>
+      </div>
+    </div>
 
     {% if settings.dgEnableSearch === true %}
-      {%include "components/searchContainer.njk"%}
-    {% endif %}
-
-    <main class="content cm-s-obsidian {{contentClasses}}">
-      <header>
-        {% if settings.dgShowInlineTitle === true %}
-          <h1 data-note-icon="{% if noteIcon %}{{noteIcon}}{% else %}{{meta.noteIconsSettings.default}}{% endif %}">{% if title %}{{ title }}{% else %}{{ page.fileSlug }}{% endif %}</h1>
-        {% endif %}
-        <div class="header-meta">
-          {% if settings.dgShowTags === true and tags %}
-            <div class="header-tags">
-              {% for tag in tags %}
-                {% if tag != 'gardenEntry' and tag !='note' %}
-                  <a class="tag" onclick="toggleTagSearch(this)">
-                    #{{tag}}
-                  </a>
-                {% endif %}
-              {% endfor %}
-            </div>
-          {% endif %}
-          {%- if meta.timestampSettings.showCreated or meta.timestampSettings.showUpdated -%}
-          <div class="timestamps">
-            {%- if meta.timestampSettings.showCreated and created -%}
-            <div><i icon-name="calendar-plus"></i> <span class="human-date" data-date="{{created}}"></span></div>
-            {%- endif -%}
-            {%- if meta.timestampSettings.showUpdated and updated -%}
-            <div><i icon-name="calendar-clock"></i> <span class="human-date" data-date="{{updated}}"></span></div>
-            {%- endif -%}
-          </div>
-          {%- endif -%}
-        </div>
-      {% for imp in dynamics.common.header %}
-        {% include imp %}
-      {% endfor %}
-      {% for imp in dynamics.notes.header %}
-        {% include imp %}
-      {% endfor %}
-      </header>
-      {% for imp in dynamics.common.beforeContent %}
-        {% include imp %}
-      {% endfor %}
-      {% for imp in dynamics.notes.beforeContent %}
-        {% include imp %}
-      {% endfor %}
-      {{ content | hideDataview | taggify | link | safe}}
-      {% for imp in dynamics.common.afterContent %}
-        {% include imp %}
-      {% endfor %}
-      {% for imp in dynamics.notes.afterContent %}
-        {% include imp %}
-      {% endfor %}
-    </main>
-
-    {% if settings.dgShowBacklinks === true or settings.dgShowLocalGraph === true or settings.dgShowToc === true%}
-      {%include "components/sidebar.njk"%}
+      {% include "components/searchContainer.njk" %}
     {% endif %}
 
     {% if settings.dgLinkPreview === true %}

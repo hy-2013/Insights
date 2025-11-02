@@ -1,18 +1,20 @@
-{%if settings.dgHomeLink === true%}
-    <nav class="navbar">
-        <div class="navbar-inner">
-            <a href="{{ '/' | url }}" style="text-decoration: none;">
-                <h1 style="margin: 15px !important;">{{meta.siteName}}</h1>
-            </a>
-        </div>
-        {% if settings.dgEnableSearch === true%}
-            {% include "components/searchButton.njk" %}
-        {%endif%}
-    </nav>
-    {%else%}
-    <div class="empty-navbar" >
-        {% if settings.dgEnableSearch === true%}
-            {% include "components/searchButton.njk" %}
-        {%endif%}
+{% if settings.dgHomeLink === true %}
+  <nav class="nav-panel">
+    <div class="nav-panel__brand">
+      <a class="nav-panel__brand-link" href="{{ '/' | url }}">{{ meta.siteName }}</a>
     </div>
-{%endif%}
+    {% if settings.dgEnableSearch === true %}
+      <div class="nav-panel__actions">
+        {% include "components/searchButton.njk" %}
+      </div>
+    {% endif %}
+  </nav>
+{% else %}
+  <div class="nav-panel nav-panel--empty">
+    {% if settings.dgEnableSearch === true %}
+      <div class="nav-panel__actions">
+        {% include "components/searchButton.njk" %}
+      </div>
+    {% endif %}
+  </div>
+{% endif %}
