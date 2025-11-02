@@ -3,19 +3,19 @@
 ---
 
 
-- **blog**
-	- [[010 outbox/blog/【LLM Review】Decrypt Ptuning - 2023W32\|【LLM Review】Decrypt Ptuning - 2023W32]]
-- **ppt**
-	- [[010 outbox/ppt/【LLM Review】The stage review of LLM - PPT - 2023M9\|【LLM Review】The stage review of LLM - PPT - 2023M9]]
-- **AI**
-	- **LLM**
-		- [[030 PKV/AI/LLM/【LLM Review】LLM的问题及当前解决方案 - 2023M6\|【LLM Review】LLM的问题及当前解决方案 - 2023M6]]
-		- [[030 PKV/AI/LLM/【LLM Review】如何训练行业大模型 - 2023M8\|【LLM Review】如何训练行业大模型 - 2023M8]]
-		- [[030 PKV/AI/LLM/【大模型创意应用大赛】Chatsum智能秘书 - 提交贴\|【大模型创意应用大赛】Chatsum智能秘书 - 提交贴]]
-		- [[030 PKV/AI/LLM/Chatsum Tech Report\|Chatsum Tech Report]]
-		- **Paper**
-			- [[040 Plan/Phoenix/LLM Pretrain\|LLM Pretrain]]
-	- **基础**
-		- [[030 PKV/AI/基础/【ML基础】FTRL原理介绍与工程实践 - 2017M5\|【ML基础】FTRL原理介绍与工程实践 - 2017M5]]
-		- [[030 PKV/AI/基础/【ML基础】从特征组合及其权重的角度对常用模型做统一解释 - 2022H1\|【ML基础】从特征组合及其权重的角度对常用模型做统一解释 - 2022H1]]
+
+- [[010 outbox/【Agent】Building more effective AI agents - 2025-M10\|【Agent】Building more effective AI agents - 2025-M10]]
+- [[010 outbox/【Agent】Context Engineering for AI Agents with LangChain and Manus-2025-M10\|【Agent】Context Engineering for AI Agents with LangChain and Manus-2025-M10]]
+- [[010 outbox/【AI Coding】Claude Code和Codex经验汇总 - 2025M10\|【AI Coding】Claude Code和Codex经验汇总 - 2025M10]]
+- [[010 outbox/【AI】All things AI w @altcap @sama & @satyanadella.  A Halloween Special -2025-M10\|【AI】All things AI w @altcap @sama & @satyanadella.  A Halloween Special -2025-M10]]
+- [[010 outbox/【AI】Andrej Karpathy — “We’re summoning ghosts, not building animals”-2025-M10\|【AI】Andrej Karpathy — “We’re summoning ghosts, not building animals”-2025-M10]]
+- [[010 outbox/【AI】OpenAI DevDay 2025 Opening Keynote with Sam Altman-2025-M10\|【AI】OpenAI DevDay 2025 Opening Keynote with Sam Altman-2025-M10]]
+- [[010 outbox/【LLM Review】Decrypt Ptuning - 2023W32\|【LLM Review】Decrypt Ptuning - 2023W32]]
+- [[010 outbox/【LLM Review】Pretrain的一些实践经验 - 2025-M2\|【LLM Review】Pretrain的一些实践经验 - 2025-M2]]
+- [[010 outbox/【LLM Review】Synthesis Data的一些实践经验 - 2025-M2\|【LLM Review】Synthesis Data的一些实践经验 - 2025-M2]]
+- [[010 outbox/【LLM Review】The stage review of LLM - 2023M9\|【LLM Review】The stage review of LLM - 2023M9]]
+- [[010 outbox/【LLM Review】The stage review of LLM - PPT - 2023M9\|【LLM Review】The stage review of LLM - PPT - 2023M9]]
+- [[010 outbox/【LLM】CT增量训练调研 - 2024W17\|【LLM】CT增量训练调研 - 2024W17]]
+- [[010 outbox/OUTPUT\|OUTPUT]]
+
 
