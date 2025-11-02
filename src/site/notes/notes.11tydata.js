@@ -19,7 +19,10 @@ module.exports = {
     },
     permalink: (data) => {
       const meta = registerFromData(data);
-      return meta ? meta.permalink : data.permalink;
+      if (meta) {
+        return meta.permalink;
+      }
+      return data.permalink || data.page?.url;
     },
     settings: (data) => {
       const noteSettings = {};
