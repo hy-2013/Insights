@@ -17,6 +17,30 @@
             <div class="toc-container">
               {{ tocHtml | safe }}
             </div>
+            <script>
+              // Remove # symbols from TOC links
+              (function() {
+                const removeTocHashes = function() {
+                  const tocLinks = document.querySelectorAll('.toc-container a');
+                  tocLinks.forEach(link => {
+                    // Remove all leading # symbols and spaces
+                    let text = link.textContent || link.innerText;
+                    text = text.replace(/^[#\s]+/, '').trim();
+                    link.textContent = text;
+                  });
+                };
+                
+                // Run immediately
+                removeTocHashes();
+                
+                // Also run after DOM is fully loaded
+                if (document.readyState === 'loading') {
+                  document.addEventListener('DOMContentLoaded', removeTocHashes);
+                } else {
+                  removeTocHashes();
+                }
+              })();
+            </script>
           </div>
         {% endif %}
       {% endif %}

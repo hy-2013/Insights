@@ -25,16 +25,15 @@
   {% endset %}
 
   <body class="theme-{{meta.baseTheme}} markdown-preview-view markdown-rendered markdown-preview-section {{meta.bodyClasses}}">
-    <header class="site-header">
-      <div class="site-header__inner">
-        <a class="site-header__brand" href="{{ '/' | url }}">{{ meta.siteName }}</a>
-        {% if settings.dgEnableSearch === true %}
-          {% include "components/searchButton.njk" %}
-        {% endif %}
-      </div>
-    </header>
-
     <div class="page-layout">
+      <header class="site-header">
+        <div class="site-header__inner">
+          <a class="site-header__brand" href="{{ '/' | url }}">{{ meta.siteName }}</a>
+          {% if settings.dgEnableSearch === true %}
+            {% include "components/searchButton.njk" %}
+          {% endif %}
+        </div>
+      </header>
       <div class="page-layout__grid">
         <aside class="page-layout__nav">
           {% if navigation | trim %}
