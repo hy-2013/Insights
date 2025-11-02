@@ -23,10 +23,24 @@
                 const removeTocHashes = function() {
                   const tocLinks = document.querySelectorAll('.toc-container a');
                   tocLinks.forEach(link => {
-                    // Remove all leading # symbols and spaces
-                    let text = link.textContent || link.innerText;
-                    text = text.replace(/^[#\s]+/, '').trim();
-                    link.textContent = text;
+                    // Get all text nodes and clean them
+                    const walker = document.createTreeWalker(
+                      link,
+                      NodeFilter.SHOW_TEXT,
+                      null,
+                      false
+                    );
+                    
+                    const textNodes = [];
+                    let node;
+                    while (node = walker.nextNode()) {
+                      textNodes.push(node);
+                    }
+                    
+                    textNodes.forEach(textNode => {
+                      // Remove all # symbols and trim whitespace
+                      textNode.textContent = textNode.textContent.replace(/#/g, '').trim();
+                    });
                   });
                 };
                 
@@ -37,7 +51,8 @@
                 if (document.readyState === 'loading') {
                   document.addEventListener('DOMContentLoaded', removeTocHashes);
                 } else {
-                  removeTocHashes();
+                  // Run again after a short delay to catch any dynamic content
+                  setTimeout(removeTocHashes, 100);
                 }
               })();
             </script>

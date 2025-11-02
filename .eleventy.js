@@ -142,6 +142,10 @@ module.exports = function (eleventyConfig) {
   })
     .use(require("markdown-it-anchor"), {
       slugify: headerToId,
+      permalink: false,
+      permalinkClass: "header-anchor",
+      permalinkSymbol: "",
+      permalinkBefore: false,
     })
     .use(require("markdown-it-mark"))
     .use(require("markdown-it-footnote"))
@@ -594,6 +598,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(tocPlugin, {
     ul: true,
     tags: ["h1", "h2", "h3", "h4", "h5", "h6"],
+    wrapper: "nav",
+    wrapperClass: "toc",
   });
 
 
