@@ -5,6 +5,8 @@ const tocPlugin = require("eleventy-plugin-nesting-toc");
 const { parse } = require("node-html-parser");
 const htmlMinifier = require("html-minifier-terser");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
+const fs = require("fs");
+const matter = require("gray-matter");
 const { resolveByLink } = require("./src/helpers/articleId");
 
 const { headerToId, namedHeadingsFilter } = require("./src/helpers/utils");
@@ -14,6 +16,38 @@ const {
 } = require("./src/helpers/userSetup");
 
 const Image = require("@11ty/eleventy-img");
+
+const rawPathPrefix = process.env.PATH_PREFIX || "";
+
+function normalizePathPrefix(prefix) {
+  if (!prefix || prefix === "/") {
+    return "";
+  }
+  let normalized = prefix.trim();
+  if (!normalized.startsWith("/")) {
+    normalized = `/${normalized}`;
+  }
+  if (normalized.endsWith("/")) {
+    normalized = normalized.slice(0, -1);
+  }
+  return normalized;
+}
+
+const pathPrefix = normalizePathPrefix(rawPathPrefix);
+
+function applyPathPrefix(prefix, urlPath) {
+  if (!urlPath) {
+    return urlPath;
+  }
+  const normalizedPrefix = normalizePathPrefix(prefix);
+  if (!normalizedPrefix) {
+    return urlPath;
+  }
+  if (!urlPath.startsWith("/")) {
+    return urlPath;
+  }
+  return `${normalizedPrefix}${urlPath}`;
+}
 function transformImage(src, cls, alt, sizes, widths = ["500", "700", "auto"]) {
   let options = {
     widths: widths,
@@ -297,7 +331,8 @@ module.exports = function (eleventyConfig) {
         const meta = resolveByLink(fileName);
 
         if (!meta) {
-          return `<a class="internal-link is-unresolved" href="${withPathPrefix(
+          return `<a class="internal-link is-unresolved" href="${applyPathPrefix(
+            pathPrefix,
             "/404"
           )}">${title}</a>`;
         }
@@ -307,7 +342,7 @@ module.exports = function (eleventyConfig) {
         }
         let resolvedPermalink = permalink;
         if (resolvedPermalink && resolvedPermalink.startsWith("/")) {
-          resolvedPermalink = withPathPrefix(resolvedPermalink);
+          resolvedPermalink = applyPathPrefix(pathPrefix, resolvedPermalink);
         }
         const href = `${resolvedPermalink}${headerLinkPath}`;
         return `<a class="internal-link" data-note-icon="${noteIcon}" href="${href}">${title}</a>`;
@@ -597,5 +632,6 @@ module.exports = function (eleventyConfig) {
     htmlTemplateEngine: "njk",
     markdownTemplateEngine: false,
     passthroughFileCopy: true,
+    pathPrefix: pathPrefix || "/",
   };
 };
