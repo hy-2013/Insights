@@ -17,6 +17,8 @@
 - [[010 outbox/【LLM Review】The stage review of LLM - 2023M9\|【LLM Review】The stage review of LLM - 2023M9]]
 - [[010 outbox/【LLM Review】The stage review of LLM - PPT - 2023M9\|【LLM Review】The stage review of LLM - PPT - 2023M9]]
 - [[010 outbox/【LLM】CT增量训练调研 - 2024W17\|【LLM】CT增量训练调研 - 2024W17]]
+- [[010 outbox/【ML基础】FTRL原理介绍与工程实践 - 2017M5\|【ML基础】FTRL原理介绍与工程实践 - 2017M5]]
+- [[010 outbox/【ML基础】从特征组合及其权重的角度对常用模型做统一解释 - 2022H1\|【ML基础】从特征组合及其权重的角度对常用模型做统一解释 - 2022H1]]
 - [[010 outbox/OUTPUT\|OUTPUT]]
 
 
