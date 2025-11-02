@@ -11,6 +11,7 @@
 - [[010 outbox/【AI】Andrej Karpathy — “We’re summoning ghosts, not building animals”-2025-M10\|【AI】Andrej Karpathy — “We’re summoning ghosts, not building animals”-2025-M10]]
 - [[010 outbox/【AI】OpenAI DevDay 2025 Opening Keynote with Sam Altman-2025-M10\|【AI】OpenAI DevDay 2025 Opening Keynote with Sam Altman-2025-M10]]
 - [[010 outbox/【LLM Review】Decrypt Ptuning - 2023W32\|【LLM Review】Decrypt Ptuning - 2023W32]]
+- [[010 outbox/【LLM Review】LLM的问题及当前解决方案 - 2023M6\|【LLM Review】LLM的问题及当前解决方案 - 2023M6]]
 - [[010 outbox/【LLM Review】Pretrain的一些实践经验 - 2025-M2\|【LLM Review】Pretrain的一些实践经验 - 2025-M2]]
 - [[010 outbox/【LLM Review】Synthesis Data的一些实践经验 - 2025-M2\|【LLM Review】Synthesis Data的一些实践经验 - 2025-M2]]
 - [[010 outbox/【LLM Review】The stage review of LLM - 2023M9\|【LLM Review】The stage review of LLM - 2023M9]]

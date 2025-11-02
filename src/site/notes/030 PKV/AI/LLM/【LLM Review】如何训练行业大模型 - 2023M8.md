@@ -35,7 +35,7 @@
 	4. 3. 如果Pretrain model做了SFT，instruct数据集构建和原始LLM SFT用的Instruct数据集特点或分布尽可能 一致，比如prompt和response的长度、回答格式（总分总）、衔接语句设计等
 2. 训练经验：
 	1. 目的：让训练使用的Instruction分布和推理时的Prompt同分布，同时告诉LLM该如何回答行业内问题。
-	2. 作用：[[030 PKV/AI/LLM/【LLM Review】LLM的问题及当前解决方案 - 2023M6#^e19919\|【LLM Review】LLM的问题及当前解决方案 - 2023M6#^e19919]]
+	2. 作用：[[010 outbox/【LLM Review】LLM的问题及当前解决方案 - 2023M6#^e19919\|【LLM Review】LLM的问题及当前解决方案 - 2023M6#^e19919]]
 	3. 方案：
 		1. 直接Instruction FT或Supervise Instruct FT
 		2. 蒸馏：
@@ -61,7 +61,7 @@
 2. 引入外接知识库：利用text2vec、bert等小模型做emb化，query emb后搜索外接知识向量数据库，得到topk chunk，根据多级知识库反解出文本，用文本拼接原始prompt，去请求LLM。
 3. 重要内容写前面或后面、中英文混用prompt 效果更佳
 4. Function call：基于langchain等实现Function call/plugin的功能，调用专家规则、领域小模型、plugin等。
-5. 其他：[[030 PKV/AI/LLM/【LLM Review】LLM的问题及当前解决方案 - 2023M6#^8297fc\|【LLM Review】LLM的问题及当前解决方案 - 2023M6#^8297fc]]
+5. 其他：[[010 outbox/【LLM Review】LLM的问题及当前解决方案 - 2023M6#^8297fc\|【LLM Review】LLM的问题及当前解决方案 - 2023M6#^8297fc]]
 
 
 ## Metrics
