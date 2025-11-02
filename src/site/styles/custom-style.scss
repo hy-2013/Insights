@@ -1,13 +1,202 @@
 body {
-    /***
-      ADD YOUR CUSTOM STYLIING HERE. (INSIDE THE body {...} section.)
-      IT WILL TAKE PRECEDENCE OVER THE STYLING IN THE STYLE.CSS FILE.
-   ***/
-    //  background-color: white;
-    //  .content {
-    //   font-size: 14px;
-    //  }
-    //  h1 {
-    //   color: black;
-    //  }
+    --bg-primary: #f6f7fb;
+    --panel-surface: #ffffff;
+    --panel-border: #e4e7ef;
+    --text-primary: #1f2933;
+    --text-secondary: #4b5563;
+    --text-subtle: #6b7280;
+    --heading-weight: 600;
+    --accent-color: #4c6ef5;
+    --accent-soft: rgba(76, 110, 245, 0.12);
+    --inline-code-bg: #eef2ff;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: "Inter", "Noto Sans SC", "Helvetica Neue", "PingFang SC", "Microsoft YaHei", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.75;
+    letter-spacing: 0.01em;
+    -webkit-font-smoothing: antialiased;
+
+    .content {
+        max-width: 780px;
+        padding: clamp(1.8rem, 3vw, 2.6rem);
+        margin: clamp(70px, 10vh, 120px) auto 6rem auto;
+        background: var(--panel-surface);
+        border-radius: 22px;
+        border: 1px solid var(--panel-border);
+        box-shadow: 0 30px 60px -40px rgba(15, 23, 42, 0.35);
+        color: var(--text-primary);
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: var(--heading-weight);
+            color: var(--text-primary);
+            letter-spacing: 0.015em;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 3.2vw, 2.6rem);
+            margin-bottom: 1.8rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid var(--panel-border);
+        }
+
+        h2 {
+            font-size: clamp(1.55rem, 2.4vw, 2rem);
+            margin: 2.5rem 0 1.2rem;
+            padding-bottom: 0.4rem;
+            border-bottom: 1px solid rgba(36, 48, 84, 0.08);
+        }
+
+        h3 {
+            font-size: clamp(1.25rem, 2vw, 1.5rem);
+            margin: 2rem 0 1rem;
+        }
+
+        p {
+            margin: 1.1rem 0;
+            color: var(--text-secondary);
+        }
+
+        ul,
+        ol {
+            padding-left: 1.4rem;
+            margin: 1.1rem 0;
+            color: var(--text-secondary);
+        }
+
+        li + li {
+            margin-top: 0.35rem;
+        }
+
+        blockquote {
+            border-left: 3px solid var(--accent-color);
+            background: rgba(76, 110, 245, 0.08);
+            padding: 0.9rem 1.2rem;
+            border-radius: 14px;
+            color: var(--text-secondary);
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s ease, color 0.2s ease;
+
+            &:hover,
+            &:focus {
+                border-bottom-color: var(--accent-color);
+                color: #3f57d3;
+            }
+
+            &.internal-link {
+                position: relative;
+                padding-right: 0.85rem;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    inset: auto 0.1rem 0.15rem auto;
+                    width: 0.55rem;
+                    height: 0.55rem;
+                    background: currentColor;
+                    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24'%3E%3Cpath fill='currentColor' d='m14 3l-2 2h3.586L8.293 12.293l1.414 1.414L17 6.414V10l2-2V3zM5 5h4l2-2H3v16h8l-2-2H5z'/%3E%3C/svg%3E") center/contain no-repeat;
+                    opacity: 0;
+                    transition: opacity 0.2s ease;
+                }
+
+                &:hover::after,
+                &:focus::after {
+                    opacity: 0.7;
+                }
+            }
+        }
+
+        code,
+        pre code {
+            font-family: "JetBrains Mono", "Courier New", monospace;
+            background: var(--inline-code-bg);
+            color: var(--accent-color);
+            padding: 0.15rem 0.35rem;
+            border-radius: 6px;
+            font-size: 0.9em;
+        }
+    }
+
+    .navbar,
+    .filetree-sidebar {
+        background: var(--panel-surface);
+        border-right: 1px solid rgba(30, 41, 59, 0.06);
+        box-shadow: 0 18px 40px -35px rgba(15, 23, 42, 0.4);
+    }
+
+    .filetree-sidebar {
+        padding: 1.6rem 1.4rem;
+        border-radius: 0 24px 24px 0;
+
+        .foldername-wrapper {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .filename {
+            color: var(--text-secondary);
+            padding: 0.35rem 0.45rem;
+            border-radius: 10px;
+            transition: background 0.18s ease, color 0.18s ease;
+
+            &:hover,
+            &:focus {
+                background: var(--accent-soft);
+                color: var(--accent-color);
+            }
+        }
+    }
+
+    .search-button {
+        background: var(--accent-soft);
+        color: var(--accent-color);
+        border: 1px solid rgba(76, 110, 245, 0.25);
+        border-radius: 999px;
+        padding: 0.45rem 0.85rem;
+        transition: transform 0.2s ease;
+
+        &:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 12px 20px -16px var(--accent-color);
+        }
+    }
+
+    .callout {
+        border-radius: 16px;
+        border: 1px solid var(--panel-border);
+        background: rgba(30, 41, 59, 0.04);
+
+        .callout-title-inner {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+    }
+
+    .tag,
+    .filetree-sidebar .tag {
+        background: var(--accent-soft);
+        color: var(--accent-color);
+        border-radius: 999px;
+        padding: 0.2rem 0.75rem;
+        font-size: 0.85rem;
+        border: 1px solid rgba(76, 110, 245, 0.22);
+    }
+
+    footer,
+    .graph,
+    .toc {
+        background: var(--panel-surface);
+        border-radius: 18px;
+        border: 1px solid var(--panel-border);
+        box-shadow: 0 25px 40px -38px rgba(15, 23, 42, 0.35);
+    }
 }
