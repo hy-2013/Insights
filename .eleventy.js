@@ -341,7 +341,7 @@ module.exports = function (eleventyConfig) {
             "/404"
           )}">${title}</a>`;
         }
-        permalink = meta.permalink;
+        permalink = meta.href || meta.permalink;
         if (meta.noteIcon) {
           noteIcon = meta.noteIcon;
         }

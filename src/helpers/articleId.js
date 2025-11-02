@@ -37,13 +37,15 @@ function isGardenEntry(data) {
 function buildMeta({ relativePath, data = {} }) {
   const id = createHashId(relativePath);
   const isHome = isGardenEntry(data);
-  const permalink = isHome ? "/" : `/${id}/`;
+  const permalink = isHome ? "/index.html" : `/${id}/`;
+  const href = isHome ? "/" : `/${id}/`;
   const noteIcon = data.noteIcon || process.env.NOTE_ICON_DEFAULT;
   const title = data.title || relativePath.split("/").pop();
   const meta = {
     id,
     articleId: id,
     permalink,
+    href,
     noteIcon,
     title,
     relativePath,
@@ -81,6 +83,11 @@ function registerFromData(data) {
   }
   const cached = registryByKey.get(relativePath) || registryByKey.get(relativePath.toLowerCase());
   if (cached) {
+    const shouldBeHome = isGardenEntry(data);
+    if (shouldBeHome && !cached.isHome) {
+      const refreshed = buildMeta({ relativePath, data });
+      return storeMeta(refreshed);
+    }
     return cached;
   }
   const meta = buildMeta({ relativePath, data });
