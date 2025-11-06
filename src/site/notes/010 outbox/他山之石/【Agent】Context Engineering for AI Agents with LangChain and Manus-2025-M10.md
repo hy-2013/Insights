@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/010 outbox/他山之石/【Agent】Context Engineering for AI Agents with LangChain and Manus-2025-M10/","tags":["#LLM/Agent"]}
+{"dg-publish":true,"permalink":"/010 outbox/他山之石/【Agent】Context Engineering for AI Agents with LangChain and Manus-2025-M10/","tags":["LLM/Agent"]}
 ---
 
 
@@ -63,9 +63,9 @@ Pete：我同意 Cognition 的警示——多 agent 同步很难。但这不是�
 
 ### Offloading 的新维度：工具分层动作空间（00:22:18 - 00:29:03）
 Pete：当你接入 MCP，光 offload 工作上下文还不够，工具定义本身放在前置上下文会导致“context confusion”（调用错工具或不存在的工具）。动态 RAG 按需加载工具也有问题：每次重置前置工具定义的“前缀上下文”，而且过去调用已移除工具的 few-shot 痕迹仍在，会诱导错误调用。我们在 Manus 做“分层动作空间”：
-- Level 1 Function calling：仅保留少量“原子函数”（读写文件、执行 shell、文件/互联网搜索、浏览器操作）。schema-safe（约束解码），且可组合复杂工作流；其余能力上移。
+- Level 1 Function calling：**仅保留少量“原子函数”**（读写文件、执行 shell、文件/互联网搜索、浏览器操作）。schema-safe（约束解码），且可组合复杂工作流；其余能力上移。
 - Level 2 Sandbox utilities：每个 Manus 会话在我们自研 Linux 虚机沙盒内运行，模型可用 shell 调用预装的命令行工具（格式转换、语音识别、Manus MCP CLI 等）。我们不把 MCP 工具注入 function calling，而是通过 CLI 访问。大输出写文件或分页返回，配合 grep/cat/less/more 处理。缺点是前端的低延迟交互更难。
-- Level 3 Packages/APIs：Manus 可写 Python 脚本调用预授权 API/包（3D 设计库、金融 API 等），订阅内含多个预置 API key。非常适合需要大量计算/内存但无需把全部数据塞进模型上下文的任务；例如分析一年的股票数据，脚本计算，模型只接收摘要。参考 CodeAct（论文）里“代码可组合一步串多事”的思路，但直译代码不 schema-safe，需挑场景。
+- Level 3 Packages/APIs：Manus 可**写 Python 脚本调用预授权 API/包**（3D 设计库、金融 API 等），订阅内含多个预置 API key。非常适合需要大量计算/内存但无需把全部数据塞进模型上下文的任务；例如分析一年的股票数据，脚本计算，模型只接收摘要。参考 CodeAct（论文）里“代码可组合一步串多事”的思路，但直译代码不 schema-safe，需挑场景。
 - 界面统一：这三层从模型视角都通过标准 function call 接口（如 shell、file），保持接口简单、cache 友好且正交。
 - 五维联动：offload/retrieve 让 reduction 更有效，稳定检索让 isolation 安全；隔离减缓上下文增长且降低 reduction 频率，但也影响缓存效率与输出质量。Context engineering 是在冲突目标间找平衡的“科学+艺术”，很难。
 - 最后忠告：**避免 context over-engineering**。过去 6-7 个月最大的飞跃都来自简化与移除不必要的技巧，并更信任模型；越简化越快、越稳、越聪明。目标是让模型的工作更简单而不是更复杂。请记住：**build less, understand more**。

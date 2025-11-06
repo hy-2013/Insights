@@ -8,7 +8,7 @@
 
 在一睹FTRL尊容之前，本文先简单介绍一下工业界常用的推荐系统框架，以便使各位读者能了解到FTRL究竟是在哪个模块发挥着它巨大的功效。
 
-![](https://raw.githubusercontent.com/lee-agi/MarkdownPhoto/master/ftrl_blog/14940922519888.jpg)
+![](https://raw.githubusercontent.com/hy-2013/MarkdownPhoto/master/ftrl_blog/14940922519888.jpg)
 
 图 1.1
 
@@ -33,7 +33,7 @@ FTRL算法的设计思想其实并不复杂，就是每次找到让之前所有�
 
 FOBOS算法在2009年由Duchi与Singer提出，该算法是对投影次梯度（projected subgradient）方法的一个改造，以有效的获得模型的稀疏解。该算法将迭代投影次梯度法拆成两步：
 
-![](https://raw.githubusercontent.com/lee-agi/MarkdownPhoto/master/ftrl_blog/14940969899085.jpg)
+![](https://raw.githubusercontent.com/hy-2013/MarkdownPhoto/master/ftrl_blog/14940969899085.jpg)
 
 其中在第二步中，第一项使该步的迭代解不要离第一步的临时解太远，第二项为了限制模型复杂度添加的正则项。详细的公式推导过程可参考paper[5].
 
@@ -41,7 +41,7 @@ FOBOS算法在2009年由Duchi与Singer提出，该算法是对投影次梯度（
 
 RDA算法于2010年由微软提出，该算法相对与FOBOS在精度与稀疏性之间做了平衡，在L1正则下，RDA相较FOBOS可以更有效地得到稀疏解。RDA的权值迭代公式如下：
 
-![](https://raw.githubusercontent.com/lee-agi/MarkdownPhoto/master/ftrl_blog/14940977095344.jpg)
+![](https://raw.githubusercontent.com/hy-2013/MarkdownPhoto/master/ftrl_blog/14940977095344.jpg)
 
 其详细的推导过程，可参见paper[6].
 
@@ -49,11 +49,11 @@ RDA算法于2010年由微软提出，该算法相对与FOBOS在精度与稀疏�
 
 FTRL算法在2013年由google的Brendan提出，全名为Per-coordinate Follow The Regularized Leader Proximal（全名揭示了算法的一些重要特征），且paper中带工程实现的伪代码。该算法的权值迭代公式和主要推导过程如下：
 
-![](https://raw.githubusercontent.com/lee-agi/MarkdownPhoto/master/ftrl_blog/14940986750664.jpg)
+![](https://raw.githubusercontent.com/hy-2013/MarkdownPhoto/master/ftrl_blog/14940986750664.jpg)
 
 FTRL融合了RDA和FOBOS的特点，实验表明，在L1正则下，稀疏性与精度都好于RDA和FOBOS。具体实现对比如下：
 
-![](https://raw.githubusercontent.com/lee-agi/MarkdownPhoto/master/ftrl_blog/14940987849804.jpg)
+![](https://raw.githubusercontent.com/hy-2013/MarkdownPhoto/master/ftrl_blog/14940987849804.jpg)
 
 其中（A）代表累积梯度项，（B）代表正则化处理项，（C）代表累加和项（该项限制了新的迭代结果不要与之前的迭代结果偏离太远，也就是FTRL算法中proximal的含义）。
 
@@ -61,11 +61,11 @@ FTRL融合了RDA和FOBOS的特点，实验表明，在L1正则下，稀疏性与
 
 FTRL的工程实现伪代码如下：
 
-![](https://raw.githubusercontent.com/lee-agi/MarkdownPhoto/master/ftrl_blog/14940992415196.jpg)
+![](https://raw.githubusercontent.com/hy-2013/MarkdownPhoto/master/ftrl_blog/14940992415196.jpg)
 
 由算法伪代码可以看出，FTRL工程实现部分在理论推导公式的基础上做了一些变换和在工程实现上做了一些trick。其中最值得说明的一点为per-coordinate，即FTRL是对权重向量w的每一维分开训练更新的，每一维使用不同的学习速率，其中学习速率的计算公式为：
 
-![](https://raw.githubusercontent.com/lee-agi/MarkdownPhoto/master/ftrl_blog/14940996730264.jpg)
+![](https://raw.githubusercontent.com/hy-2013/MarkdownPhoto/master/ftrl_blog/14940996730264.jpg)
 
 其中beta和lamda2等输入参数，是可以省略简化掉的，输入参数的具体设置方式可参考paper[1]中给的建议。
 

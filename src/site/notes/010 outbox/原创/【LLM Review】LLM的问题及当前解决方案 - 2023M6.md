@@ -170,7 +170,7 @@
 	2. 主动规划：task自主拆分、task排序、result reflection、人工干预。planning是当前最难的task之一（还有reasoning/数学）
 	3. 记忆：基于长短、重要性的高效记忆和提取。仅向量数据库时不够的
 	4. 工具使用：基于function signature的语义匹配也可以做到基本可用
-![Pasted image 20230904120902|300](https://raw.githubusercontent.com/lee-agi/Insights/main/src/site/img/user/990%20AttachmentPasted%20image%2020230904120902.png)
+![Pasted image 20230904120902|300](https://raw.githubusercontent.com/hy-2013/Insights/main/src/site/img/user/990%20AttachmentPasted%20image%2020230904120902.png)
 5. Agent分享：LLM + 任务拆解、mem、工具
 	1. gpt-engineer：提供了自动task拆分prompt engineering，和增加了人工干预流程（促进任务细化），logging回溯系统。
 	2. baby AGI：增加了mem（更准确的说是context task）。workflow从<objective, init_task>开始（如果init-task不准确，后面能否纠正过来？）
