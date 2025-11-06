@@ -9,7 +9,7 @@ See the README in the plugin repo for information on how to set it up.
 Docs are available at [dg-docs.ole.dev](https://dg-docs.ole.dev/)
 
 # Index
-[Home](https://github.com/hy-2013/Insights)
+[Home](https://github.com/lee-agi/Insights)
 
 ## Contributing
 请在提交变更前阅读仓库根目录的 `AGENTS.md`，其中包含项目结构、构建命令、编码规范、测试要求与 PR 审查要点。

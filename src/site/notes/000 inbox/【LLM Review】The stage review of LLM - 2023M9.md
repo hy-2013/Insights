@@ -13,10 +13,10 @@
 1. 无训练成本
 	1. prompt engineering：更好的从LLM中取出知识
 		1. **System prompt + ICL + COT**
-			1. ![Pasted image 20230903163648|300](https://raw.githubusercontent.com/hy-2013/Insights/main/src/site/img/user/990%20AttachmentPasted%20image%2020230903163648.png)
+			1. ![Pasted image 20230903163648|300](https://raw.githubusercontent.com/lee-agi/Insights/main/src/site/img/user/990%20AttachmentPasted%20image%2020230903163648.png)
 		2. **限定回答范围：[guidance](https://github.com/guidance-ai/guidance)**
-			1. ![Pasted image 20230903162854|300](https://raw.githubusercontent.com/hy-2013/Insights/main/src/site/img/user/990%20AttachmentPasted%20image%2020230903162854.png)
-			2. ![Pasted image 20230903163124|300](https://raw.githubusercontent.com/hy-2013/Insights/main/src/site/img/user/990%20AttachmentPasted%20image%2020230903163124.png)
+			1. ![Pasted image 20230903162854|300](https://raw.githubusercontent.com/lee-agi/Insights/main/src/site/img/user/990%20AttachmentPasted%20image%2020230903162854.png)
+			2. ![Pasted image 20230903163124|300](https://raw.githubusercontent.com/lee-agi/Insights/main/src/site/img/user/990%20AttachmentPasted%20image%2020230903163124.png)
 
 		3. **Retrieval augumented（RAG）**
 			1. 基于检索返回的内容做回答：ChatXX，如ChatDoc、chatpdf等
@@ -31,12 +31,12 @@
 				1. [perplexity.ai](www.perplexity.ai/)
 				2. [Google Search Labs](https://labs.google.com/search)
 	2. **[Function Call](https://platform.openai.com/docs/guides/gpt/function-calling) + Plugins**：主动或被动的借助外部tools
-		1. ![Pasted image 20230904021655|300](https://raw.githubusercontent.com/hy-2013/Insights/main/src/site/img/user/990%20AttachmentPasted%20image%2020230904021655.png)
+		1. ![Pasted image 20230904021655|300](https://raw.githubusercontent.com/lee-agi/Insights/main/src/site/img/user/990%20AttachmentPasted%20image%2020230904021655.png)
 	3. **Ensemble/Bagging**
 		1. 多个答案bagging(CoT-SC)、输入多个prompt bagging、Ensemble refinement（Med-Palm2）
 	4. **Reflection/System2**：像人类一样非线性思考问题、reasoning、planning
 		1. ReAct、ToT
-			1. ![Pasted image 20230905224819|300](https://raw.githubusercontent.com/hy-2013/Insights/main/src/site/img/user/990%20AttachmentPasted%20image%2020230905224819.png)
+			1. ![Pasted image 20230905224819|300](https://raw.githubusercontent.com/lee-agi/Insights/main/src/site/img/user/990%20AttachmentPasted%20image%2020230905224819.png)
 2. **有训练成本：**
 	1. SFT：alignment调教
 		1. 作用：terse（shorten token）、set a given language、consistently format responses、custom tone，augment context windows
@@ -74,7 +74,7 @@
 	3. 教育：MathGPT
 	4. 法律：Chatlaw（推荐读paper）
 	5. 心理咨询：扁鹊
-![Pasted image 20230906145153|300](https://raw.githubusercontent.com/hy-2013/Insights/main/src/site/img/user/990%20AttachmentPasted%20image%2020230906145153.png)
+![Pasted image 20230906145153|300](https://raw.githubusercontent.com/lee-agi/Insights/main/src/site/img/user/990%20AttachmentPasted%20image%2020230906145153.png)
 
 
 ## 4. 时效性 拥有
