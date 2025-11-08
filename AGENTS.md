@@ -13,8 +13,8 @@
 - `npm run get-theme`：基于 `.env` 中的 `THEME` URL 更新主题文件，若远程不可达请回退至最近可用快照。
 
 ## Deployment & Hosting
-- GitHub Pages 部署使用 `.github/workflows/pages.yml`，默认推送 `main` 分支即触发；必要时可通过传入 `PATH_PREFIX` 自定义仓库子路径，默认值为 `/Insights`。
-- 若需同时保留 Vercel/Netlify 流程，可在对应平台设置 `PATH_PREFIX=/` 保持兼容，并在 `.env` 中的 `SITE_BASE_URL` 指向最终访问域名。
+- GitHub Pages 部署使用 `.github/workflows/pages.yml`，默认推送 `main` 分支即触发；如需部署到仓库子路径，可通过覆写 `PATH_PREFIX` 指定前缀（默认构建为根路径 `/`）。
+- 若需同时保留 Vercel/Netlify 流程，可在对应平台设置合适的 `PATH_PREFIX`，并在 `.env` 中的 `SITE_BASE_URL` 指向最终访问域名。
 - 调整部署策略时，请更新本文件与 `README.md`，并记录依赖的环境变量或 Secrets。
 
 ## Coding Style & Naming Conventions

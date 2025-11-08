@@ -45,3 +45,10 @@ def test_home_layout_structure() -> None:
     assert content_index < sidebar_index, "内容列应位于侧栏之前"
 
     assert "site-header" in html_text, "应渲染顶部站点头部区域"
+
+    assert 'href="/Insights/' not in html_text, "相对链接不应包含 /Insights/ 前缀"
+
+    search_index_path = REPO_ROOT / "dist" / "searchIndex.json"
+    assert search_index_path.exists(), "构建后应生成 dist/searchIndex.json"
+    search_index_text = search_index_path.read_text(encoding="utf-8")
+    assert '"/Insights/' not in search_index_text, "搜索索引中的链接不应包含 /Insights/ 前缀"

@@ -17,7 +17,7 @@ const {
 
 const Image = require("@11ty/eleventy-img");
 
-const DEFAULT_PATH_PREFIX = "/Insights";
+const DEFAULT_PATH_PREFIX = "/";
 const rawPathPrefix = Object.prototype.hasOwnProperty.call(process.env, "PATH_PREFIX")
   ? process.env.PATH_PREFIX
   : process.env.ELEVENTY_ENV === "dev"
