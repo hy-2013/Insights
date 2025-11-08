@@ -35,7 +35,7 @@ jobs:
         env:
           ELEVENTY_ENV: prod
           NODE_ENV: production
-          PATH_PREFIX: /Insights
+          PATH_PREFIX: /
 
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
