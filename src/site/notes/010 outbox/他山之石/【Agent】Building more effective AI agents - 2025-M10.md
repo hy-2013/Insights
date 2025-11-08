@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/010 outbox/他山之石/【Agent】Building more effective AI agents - 2025-M10/","tags":["#LLM/Agent"]}
+{"dg-publish":true,"permalink":"/010 outbox/他山之石/【Agent】Building more effective AI agents - 2025-M10/","tags":["#Template"]}
 ---
 
 
@@ -45,3 +45,6 @@ Alex：我们最近在 Claude.ai（Web）上线了一个能力：Claude 通过�
 
 ### 用代码生成 artifact 往往优于直接产出（00:02:26 - 00:03:09）
 Eric：我觉得这是非常有效的路径。前几天 Claude 帮我做演示用的图，它能直接写出 SVG 文件。但当我想要一个更复杂、需要大量重复与引用的图时，Claude 改为先写代码来生成 SVG，运行速度比直接让 Claude 逐字输出那个高度重复的图快得多。**在许多场景里，用代码去生成 artifact 比“直接生成成品”更好**，尤其是复杂、重复度高的难例。这是应对更难任务的一条有效方法。Alex：对，code 提供了一种……（未完）
+
+## 欢迎交流与合作
+目前主要兴趣是让agent在实际生活中落地，想进一步交流可加我微信（微信号：cleezhang）。一些[自我介绍](https://lee-agi.github.io/Insights/16695c5e82/)。

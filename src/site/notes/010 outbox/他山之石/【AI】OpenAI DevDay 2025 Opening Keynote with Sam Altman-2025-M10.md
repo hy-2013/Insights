@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/010 outbox/他山之石/【AI】OpenAI DevDay 2025 Opening Keynote with Sam Altman-2025-M10/","tags":["#LLM"]}
+{"dg-publish":true,"permalink":"/010 outbox/他山之石/【AI】OpenAI DevDay 2025 Opening Keynote with Sam Altman-2025-M10/","tags":["#LLM","#Template"]}
 ---
 
 
@@ -189,3 +189,6 @@ Sam：希望今天能给你一些新灵感。我们想让 OpenAI 成为这个新
 - 新模型进 API：GPT-5 Pro、Sora 2、real-time mini，拓展可能性。
 
 Sam：我们在见证重大的变化：软件过去要花数月或数年去做，你们刚才看到，现在可能只要几分钟。用 AI 构建不再需要庞大团队，需要的是好点子，你就能以前所未有的速度把它变成现实。谢谢你们到来并持续构建。我们的目标是让 AI 对每个人都有用，没有你们做不到。也向促成今天一切的团队致敬。今天还有很多内容，享受各个环节，回头见。谢谢大家。
+
+## 欢迎交流与合作
+目前主要兴趣是让agent在实际生活中落地，想进一步交流可加我微信（微信号：cleezhang）。一些[自我介绍](https://lee-agi.github.io/Insights/16695c5e82/)。

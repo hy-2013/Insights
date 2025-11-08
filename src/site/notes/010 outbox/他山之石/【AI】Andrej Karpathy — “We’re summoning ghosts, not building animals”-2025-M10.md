@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/010 outbox/他山之石/【AI】Andrej Karpathy — “We’re summoning ghosts, not building animals”-2025-M10/","tags":["#LLM"]}
+{"dg-publish":true,"permalink":"/010 outbox/他山之石/【AI】Andrej Karpathy — “We’re summoning ghosts, not building animals”-2025-M10/","tags":["#LLM","#Template"]}
 ---
 
 
@@ -181,3 +181,6 @@ Andrej Karpathy：交替**on-demand深度学习**（为项目目标）与**bread
 
 ### 结束与行动号召（02:25:39 - 02:26:06）
 Andrej Karpathy：喜欢本期就分享、评分/留言；赞助见 dworkesh.com/advertise。下一期见。
+
+## 欢迎交流与合作
+目前主要兴趣是让agent在实际生活中落地，想进一步交流可加我微信（微信号：cleezhang）。一些[自我介绍](https://lee-agi.github.io/Insights/16695c5e82/)。

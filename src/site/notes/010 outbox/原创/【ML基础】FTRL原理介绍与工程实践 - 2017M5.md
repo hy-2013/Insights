@@ -1,6 +1,7 @@
 ---
-{"dg-publish":true,"permalink":"/010 outbox/原创/【ML基础】FTRL原理介绍与工程实践 - 2017M5/"}
+{"dg-publish":true,"permalink":"/010 outbox/原创/【ML基础】FTRL原理介绍与工程实践 - 2017M5/","tags":["#Template"]}
 ---
+
 
 ## 1. 前言
 
@@ -92,4 +93,7 @@ FTRL的工程实现伪代码如下：
 > [5] John Duchi Y S. Efficient learning using forward-backward splitting[J]. Advances in Neural Information Processing Systems, 2009:495-503.
 > [6] Xiao L. Dual Averaging Methods for Regularized Stochastic Learning and Online Optimization[M]. JMLR.org, 2010.
 
-本文成文于2017.5.
+## 欢迎交流与合作
+目前主要兴趣是让agent在实际生活中落地，想进一步交流可加我微信（微信号：cleezhang）。一些[自我介绍](https://lee-agi.github.io/Insights/16695c5e82/)。
+
+> 本文发表于 2017.5。

@@ -4,7 +4,6 @@
 
 
 
-- [[010 outbox/【创业】From Idea to $650M Exit Lessons in Building AI Startups-2025-M10\|【创业】From Idea to $650M Exit Lessons in Building AI Startups-2025-M10]]
 - **他山之石**
 	- [[010 outbox/他山之石/【Agent】Building more effective AI agents - 2025-M10\|【Agent】Building more effective AI agents - 2025-M10]]
 	- [[010 outbox/他山之石/【Agent】Context Engineering for AI Agents with LangChain and Manus-2025-M10\|【Agent】Context Engineering for AI Agents with LangChain and Manus-2025-M10]]

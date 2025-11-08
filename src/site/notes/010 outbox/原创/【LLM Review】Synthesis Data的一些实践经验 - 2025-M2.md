@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/010 outbox/原创/【LLM Review】Synthesis Data的一些实践经验 - 2025-M2/","tags":["#LLM"]}
+{"dg-publish":true,"permalink":"/010 outbox/原创/【LLM Review】Synthesis Data的一些实践经验 - 2025-M2/","tags":["#LLM","#Template"]}
 ---
 
 
@@ -43,3 +43,6 @@
 	2. 法律风险
 
 ### TODO
+
+## 欢迎交流与合作
+目前主要兴趣是让agent在实际生活中落地，想进一步交流可加我微信（微信号：cleezhang）。一些[自我介绍](https://lee-agi.github.io/Insights/16695c5e82/)。

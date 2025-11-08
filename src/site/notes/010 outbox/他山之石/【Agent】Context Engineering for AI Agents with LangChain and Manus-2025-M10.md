@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/010 outbox/他山之石/【Agent】Context Engineering for AI Agents with LangChain and Manus-2025-M10/","tags":["#LLM/Agent"]}
+{"dg-publish":true,"permalink":"/010 outbox/他山之石/【Agent】Context Engineering for AI Agents with LangChain and Manus-2025-M10/","tags":["#LLM/Agent","#Template"]}
 ---
 
 
@@ -171,3 +171,5 @@ Lance：时间差不多了，感谢 Pete。我们会提供录音与幻灯片。
 
 Pete：欢迎大家试用 Manus，我们有免费层。谢谢邀请！期待大家的作品。
 
+## 欢迎交流与合作
+目前主要兴趣是让agent在实际生活中落地，想进一步交流可加我微信（微信号：cleezhang）。一些[自我介绍](https://lee-agi.github.io/Insights/16695c5e82/)。

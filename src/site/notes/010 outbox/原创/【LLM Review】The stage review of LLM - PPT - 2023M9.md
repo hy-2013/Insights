@@ -1,7 +1,6 @@
 ---
-{"dg-publish":true,"permalink":"/010 outbox/原创/【LLM Review】The stage review of LLM - PPT - 2023M9/"}
+{"dg-publish":true,"permalink":"/010 outbox/原创/【LLM Review】The stage review of LLM - PPT - 2023M9/","tags":["#Template"]}
 ---
-
 
 
 ## Agenda
@@ -96,7 +95,6 @@
 		3. Speculative decoding：较小模型生成，较大模型挑选，异步并发
 	2. 硬件或框架：FlashAttention
 
-
 ---
 ## 3. 专业性 优化
 - 训练垂域LLM
@@ -130,4 +128,6 @@
 3. 大模型的未来研究方向有哪些？
 
 ---
-## Q&A
+
+## 欢迎交流与合作
+目前主要兴趣是让agent在实际生活中落地，想进一步交流可加我微信（微信号：cleezhang）。一些[自我介绍](https://lee-agi.github.io/Insights/16695c5e82/)。

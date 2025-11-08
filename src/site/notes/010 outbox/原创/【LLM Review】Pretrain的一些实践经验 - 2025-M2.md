@@ -1,6 +1,7 @@
 ---
-{"dg-publish":true,"permalink":"/010 outbox/原创/【LLM Review】Pretrain的一些实践经验 - 2025-M2/","tags":["#LLM/Pretrain"]}
+{"dg-publish":true,"permalink":"/010 outbox/原创/【LLM Review】Pretrain的一些实践经验 - 2025-M2/","tags":["#Template"]}
 ---
+
 
 ## TLDR
 1. 本文介绍了From Scratch Pretrain一个LLM的所有关键环节，包括数据收集和清洗，tokenizer构建，模型结构选型，核心超参设计等。
@@ -70,3 +71,6 @@ _The Llama 3 Herd of Models | Research - AI at Meta_ (no date). Available at: ht
 Wenzek, G. _et al._ (2020) ‘CCNet: Extracting high quality monolingual datasets from web crawl data’, in _Proceedings of the 12th language resources and evaluation conference_, pp. 4003–4012.
 Ye, T. _et al._ (2024) ‘Physics of Language Models: Part 2.1, Grade-School Math and the Hidden Reasoning Process’. arXiv. Available at: http://arxiv.org/abs/2407.20311 (Accessed: 5 December 2024).
 Zhou, F. _et al._ (2024) ‘Programming every example: Lifting pre-training data quality like experts at scale’. Available at: https://arxiv.org/abs/2409.17115.
+
+## 欢迎交流与合作
+目前主要兴趣是让agent在实际生活中落地，想进一步交流可加我微信（微信号：cleezhang）。一些[自我介绍](https://lee-agi.github.io/Insights/16695c5e82/)。

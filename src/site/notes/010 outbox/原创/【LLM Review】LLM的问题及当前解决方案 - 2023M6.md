@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/010 outbox/原创/【LLM Review】LLM的问题及当前解决方案 - 2023M6/","tags":["#LLM"]}
+{"dg-publish":true,"permalink":"/010 outbox/原创/【LLM Review】LLM的问题及当前解决方案 - 2023M6/","tags":["#LLM","#Template"]}
 ---
 
 
@@ -197,3 +197,6 @@
 3. 中文LLM
 	1. GLM：[GLM: General Language Model Pretraining with Autoregressive Blank Infilling](https://arxiv.org/abs/2103.10360)
 	2. XX-Chinese系列
+
+## 欢迎交流与合作
+目前主要兴趣是让agent在实际生活中落地，想进一步交流可加我微信（微信号：cleezhang）。一些[自我介绍](https://lee-agi.github.io/Insights/16695c5e82/)。
