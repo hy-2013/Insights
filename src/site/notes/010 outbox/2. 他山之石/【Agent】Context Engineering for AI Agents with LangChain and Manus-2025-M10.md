@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/010 outbox/2. 他山之石/【Agent】Context Engineering for AI Agents with LangChain and Manus-2025-M10/","tags":["LLM/Agent"]}
+{"dg-publish":true,"permalink":"/010 outbox/2. 他山之石/【Agent】Context Engineering for AI Agents with LangChain and Manus-2025-M10/"}
 ---
 
 
@@ -51,7 +51,7 @@ Pete：尽管微调/后训练越来越容易（例如 Think Machine 的 Tinker A
 
 ### Context Reduction：Compaction vs Summarization（00:15:03 - 00:19:19）
 Pete：
-- Compaction（可逆外部化）：在 Manus，每个工具调用及结果都有 full/compact 两种格式。compact 会剥离可由文件系统/外部状态重建的信息。例如写文件工具的返回只保留 path，去掉冗长的 content，因为文件已落盘，agent 需要时可按 path 读取。可逆性很关键：agent 的后续决策可能突然依赖 10 步前的细节，你无法预知。
+- **Compaction（可逆外部化）**：在 Manus，每个工具调用及结果都有 full/compact 两种格式。compact 会剥离可由文件系统/外部状态重建的信息。例如写文件工具的返回只保留 path，去掉冗长的 content，因为文件已落盘，agent 需要时可按 path 读取。可逆性很关键：agent 的后续决策可能突然依赖 10 步前的细节，你无法预知。
 - Summarization（不可逆）：当上下文仍然增长到临界，我们在摘要前会先 offload 关键部分，甚至把“预摘要的上下文”整体落盘为日志文件，模型可用 Glob/grep 自检索。区别在于：compaction 可逆、summarization 不可逆；
 - 控制阈值：模型的硬上限可能是 1M tokens，但“实效”退化更早，通常 128K~200K 会出现“context rot”（重复、变慢、质量下降）。识别 ROT 阈值并在接近时先触发 compaction，而非直接摘要。同时只压缩“最老 50%”工具消息，保留新鲜 few-shot 示例，避免模型学到“紧凑格式的缺字段”错误。多轮 compaction 增益若很小，再做摘要；摘要时用全量数据而非紧凑数据，并保留“最后几条工具调用与结果的完整细节”，保持风格/语气与任务延续更平滑。
 - 生成摘要的提示：不要 free-form，总用结构化 schema（如“修改了哪些文件”“用户目标”“当前进度”），稳定且可迭代。
@@ -107,7 +107,7 @@ Pete：对，适用于工具调用与结果。几乎所有动作都可 offload �
 ### Q&A：复杂搜索的 agent-as-tool（00:39:35 - 00:41:32）
 Lance：既要让下一步能访问完整信息，又不把大块上下文留在消息历史，如何权衡？
 
-Pete：复杂搜索（多 query、聚合筛选）可用“agent-as-tool”——从模型视角是一个函数（如 advanced_search），内部触发子 agent 的固定输出 schema 工作流，把结构化结果返回主 agent。简单搜索（如单次 Google）则直接写全量结果进上下文，靠 compaction 清理；同时引导模型把关键洞见写入文件，预防提前压缩导致信息丢失。
+Pete：**复杂搜索（多 query、聚合筛选）可用“agent-as-tool”**——从模型视角是一个函数（如 advanced_search），内部触发子 agent 的固定输出 schema 工作流，把结构化结果返回主 agent。简单搜索（如单次 Google）则直接写全量结果进上下文，靠 compaction 清理；同时引导模型把关键洞见写入文件，预防提前压缩导致信息丢失。
 
 ### Q&A：agent 通信的“模式与契约”（00:41:35 - 00:43:42）
 Lance：agent-agent 通信如何避免过/不足传递？
