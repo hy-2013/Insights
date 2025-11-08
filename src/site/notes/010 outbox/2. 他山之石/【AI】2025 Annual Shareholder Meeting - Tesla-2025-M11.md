@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/010 outbox/2. 他山之石/【AI】2025 Annual Shareholder Meeting - Tesla-2025-M11/"}
+{"dg-publish":true,"permalink":"/010-outbox/2/ai-2025-annual-shareholder-meeting-tesla-2025-m11/","tags":["#创业","#Tech"]}
 ---
 
 
@@ -17,50 +17,6 @@
 这是一场以投票与愿景为核心的年会：Brandon Earhart宣读股东提案与结果，随后Elon Musk以“Optimus”为纲勾勒Tesla的新书而非新章。重要看点包括：多数股东提案被否、CEO绩效奖高票通过；Elon谈到FSD的“允许发短信”安全策略、CyberCab监管路径、工厂文化与供应链投资；并在Q&A中谈及通过Neuralink进行“意识上传”的可能性、太空太阳能与Starship的成本拐点、公开市场的“寄生负担”以及与XAI的潜在协作。**非共识亮点：FSD场景下的“text and drive”安全策略、Starship使“空间AI/太阳能”具经济性、意识上传在20年内可望可行。**
 
 ## 全文
-### 开场与流程提示（00:10:10 - 00:16:22）
-**现场主持人**：请注意，我们即将开始节目，请就座，谢谢。（Your attention please...）
-**Brandon Earhart**：欢迎来到德州——Tesla的家。我是Brandon Earhart，担任总法律顾问与公司秘书，欢迎来到你们的2025年度股东大会。（to Texas, the home of Tesla...）
-**Brandon Earhart**：与去年类似，本次会议分两部分：先处理14项投票事项；第二部分是Elon Musk。（two parts... Elon Musk）
-**Brandon Earhart**：今天我们将讨论业务展望，并可能做出前瞻性陈述（forward-looking statements），这些基于当前预期。（forward-looking statements...）
-**Brandon Earhart**：实际事件或结果可能因SEC文件披露的风险和不确定性而重大偏离；这些前瞻性陈述代表我们截至今日的观点。（SEC filings...）
-
-### 致谢员工与管理层（00:23:20 - 00:23:40）
-**现场发言者**：向我们了不起、充满毅力的员工致谢，你们是Tesla的心脏；也感谢经常被忽略的管理团队，你们的付出巨大。（to our amazing employees...）
-
-### 提案7引介、提案13陈述（00:46:40 - 00:49:14）
-**现场主持人**：投票关闭前，你的投票仍能影响Tesla的未来。（Before the polls close...）
-**Brandon Earhart**：谢谢McRichie先生。提醒：董事会回应载于proxy（委托书/代理声明）。（board's response... proxy）
-**Brandon Earhart**：第七项股东提案为咨询性投票，去年获54%。董事会建议反对，理由见proxy。（recommended against...）
-**Brandon Earhart**：该提案由John Cheveden提出，他在线陈述。（John Cheveden...）
-**John Cheveden**：大家好，我是John Cheveden。提案13：关于以民主的多数投票标准治理Tesla。（Proposal 13... democratic majority vote standard）
-**John Cheveden**：提案13与Tesla的提案6主题一致。（same topic as Tesla proposal 6）
-**John Cheveden**：请求Tesla修改公司章程（charter）与细则（bylaws）中要求超出简单多数的条款，改为民主的“赞成与反对票之多数”或简单多数标准。（each voting requirement... replaced by...）
-**John Cheveden**：请同时支持提案13与提案6；提案6是“有约束力”（binding），提案13是“咨询性”（advisory）。（binding vs advisory）
-**John Cheveden**：提案13作为“备份”，需要更少票数即可通过，但仍应两者都投赞成。（backup... less votes...）
-**John Cheveden**：通过提案6将更快铺路实现董事“年度选举”（annual election）。（pave the way...）
-**John Cheveden**：年度选举有助于让董事不再充当对Musk先生的“lapdog enablers”（原话），包括其“outageous executive pay”（原话）与“outrageous distractions”（原话）。（lapdog enablers...）
-**John Cheveden**：请投赞成：以民主多数投票标准治理Tesla的提案13，以及同主题的Tesla提案6。（vote yes...）
-
-### 提案14预录陈述（00:49:47 - 00:51:47）
-**Bruce Herbert（Newground Social Investment）**：我在此推动提案14：在依据德州法律采纳限制股东提交提案的细则前，先进行股东投票。（hold a vote before adopting any bylaw...）
-**Bruce Herbert**：德州新法允许公司将参与门槛抬至“百万美元持股或持有公司3%”（Tesla约300亿美元），而非SEC当前“一年持有、25,000美元”。并且公司可“仅发通知即可实施”，无股东投票。（Texas recently passed... simply by issuing a notice）
-**Bruce Herbert**：这不是股东民主，而是“噤声”。支持高门槛的假设是“必须超级富有才有好主意”，这是不民主的。（not shareholder democracy...）
-**Bruce Herbert**：股东提案机制服务于Tesla与资本市场，股东常提前发现风险：劳工、气候、治理等，是低成本高价值的“早期预警系统”。（early warning system...）
-**Bruce Herbert**：结论很简单：在限制股东权利前，请交由股东投票。请支持提案14。（Put it to a shareholder vote...）
-
-### 宣布投票关闭与初步结果（00:51:49 - 00:55:15）
-**Brandon Earhart**：现在是最后机会提交投票。（final opportunity...）
-**Brandon Earhart**：我宣布投票站关闭。（polls are now closed）
-**Brandon Earhart**：基于收到的proxy与现场投票，初步结果如下。（announce... preliminary）
-**Brandon Earhart**：股东提案（8-14项），除提案12外，股东支持Tesla董事会的推荐。（supported the recommendations... other than proposal 12）
-**Brandon Earhart**：关于提案7（XAI），赞成票多于反对票，但有大量弃权；因其为咨询性投票，董事会将综合该支持度研究下一步。（advisory vote... abstentions）
-**Brandon Earhart**：Tesla自有提案方面：一，关于删除部分“超多数投票”（super majority）要求的组织文件修订，未获通过。（not approved）
-**Brandon Earhart**：二，“say-on-pay”咨询性投票获通过。（approved）
-**Brandon Earhart**：三，关于任命PricewaterhouseCoopers为2025财年独立审计师的“核准”获通过。（approved）
-**Brandon Earhart**：四，三位III类董事Ira、Joe与Kathleen获“连任”。（re-elected）
-**Brandon Earhart**：五，修订并重述的2019年股权激励计划获通过。（approved）
-**Brandon Earhart**：六，2025年CEO绩效奖（CEO Performance Award）授予创始人兼CEO Elon Musk，支持率超75%，获通过。（with over 75% voting in favor, approved）
-**Brandon Earhart**：我宣布会议闭幕。Elon Musk。（meeting is now closed. Elon Musk.）
 
 ### Elon开场与愿景：感谢与Optimus（00:55:27 - 00:57:31）
 **Elon Musk**：欢迎。感谢所有支持股东投票的人，也感谢Tesla董事会——我们有出色的董事会与股东。（Thanks guys...）

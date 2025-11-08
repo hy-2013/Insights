@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/010 outbox/010 outbox/","tags":["gardenEntry"]}
+{"dg-publish":true,"permalink":"/010-outbox/010-outbox/","tags":["gardenEntry"]}
 ---
 
 
@@ -18,6 +18,7 @@
 - **2. 他山之石**
 	- [[010 outbox/2. 他山之石/【Agent】Building more effective AI agents - 2025-M10\|【Agent】Building more effective AI agents - 2025-M10]]
 	- [[010 outbox/2. 他山之石/【Agent】Context Engineering for AI Agents with LangChain and Manus-2025-M10\|【Agent】Context Engineering for AI Agents with LangChain and Manus-2025-M10]]
+	- [[010 outbox/2. 他山之石/【AI】2025 Annual Shareholder Meeting - Tesla-2025-M11\|【AI】2025 Annual Shareholder Meeting - Tesla-2025-M11]]
 	- [[010 outbox/2. 他山之石/【AI】All things AI w @altcap @sama & @satyanadella.  A Halloween Special -2025-M10\|【AI】All things AI w @altcap @sama & @satyanadella.  A Halloween Special -2025-M10]]
 	- [[010 outbox/2. 他山之石/【AI】Andrej Karpathy — “We’re summoning ghosts, not building animals”-2025-M10\|【AI】Andrej Karpathy — “We’re summoning ghosts, not building animals”-2025-M10]]
 	- [[010 outbox/2. 他山之石/【AI】OpenAI DevDay 2025 Opening Keynote with Sam Altman-2025-M10\|【AI】OpenAI DevDay 2025 Opening Keynote with Sam Altman-2025-M10]]

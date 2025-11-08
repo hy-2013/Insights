@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/010 outbox/1. 原创/【AI Coding】Claude Code和Codex经验汇总 - 2025M10/","tags":["#LLM"]}
+{"dg-publish":true,"permalink":"/010-outbox/1/ai-coding-claude-code-codex-2025-m10/","tags":["#LLM"]}
 ---
 
 

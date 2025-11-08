@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/010 outbox/2. 他山之石/【AI】OpenAI DevDay 2025 Opening Keynote with Sam Altman-2025-M10/","tags":["#LLM"]}
+{"dg-publish":true,"permalink":"/010-outbox/2/ai-open-ai-dev-day-2025-opening-keynote-with-sam-altman-2025-m10/","tags":["#LLM"]}
 ---
 
 

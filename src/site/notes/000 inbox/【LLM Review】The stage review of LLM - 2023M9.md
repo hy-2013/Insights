@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/000 inbox/【LLM Review】The stage review of LLM - 2023M9/"}
+{"dg-publish":true,"permalink":"/000-inbox/llm-review-the-stage-review-of-llm-2023-m9/"}
 ---
 
 ## TLDR

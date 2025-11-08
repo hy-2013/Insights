@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/010 outbox/1. 原创/【ML基础】FTRL原理介绍与工程实践 - 2017M5/","tags":["#ML"]}
+{"dg-publish":true,"permalink":"/010-outbox/1/ml-ftrl-2017-m5/","tags":["#ML"]}
 ---
 
 

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/010 outbox/2. 他山之石/【AI】All things AI w @altcap @sama & @satyanadella.  A Halloween Special -2025-M10/","tags":["#LLM"]}
+{"dg-publish":true,"permalink":"/010-outbox/2/ai-all-things-ai-w-altcap-sama-and-satyanadella-a-halloween-special-2025-m10/","tags":["#LLM"]}
 ---
 
 

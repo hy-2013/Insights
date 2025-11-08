@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/010 outbox/1. 原创/【LLM Review】The stage review of LLM - PPT - 2023M9/","tags":["#LLM"]}
+{"dg-publish":true,"permalink":"/010-outbox/1/llm-review-the-stage-review-of-llm-ppt-2023-m9/","tags":["#LLM"]}
 ---
 
 

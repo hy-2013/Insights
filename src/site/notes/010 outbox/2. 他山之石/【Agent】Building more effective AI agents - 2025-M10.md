@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/010 outbox/2. 他山之石/【Agent】Building more effective AI agents - 2025-M10/","tags":["#LLM/Agent"]}
+{"dg-publish":true,"permalink":"/010-outbox/2/agent-building-more-effective-ai-agents-2025-m10/","tags":["#LLM/Agent"]}
 ---
 
 

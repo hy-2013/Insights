@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/010 outbox/2. 他山之石/【AI】Andrej Karpathy — “We’re summoning ghosts, not building animals”-2025-M10/","tags":["#LLM"]}
+{"dg-publish":true,"permalink":"/010-outbox/2/ai-andrej-karpathy-we-re-summoning-ghosts-not-building-animals-2025-m10/","tags":["#LLM"]}
 ---
 
 

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/010 outbox/1. 原创/【LLM Review】LLM的问题及当前解决方案 - 2023M6/","tags":["#LLM"]}
+{"dg-publish":true,"permalink":"/010-outbox/1/llm-review-llm-2023-m6/","tags":["#LLM"]}
 ---
 
 
