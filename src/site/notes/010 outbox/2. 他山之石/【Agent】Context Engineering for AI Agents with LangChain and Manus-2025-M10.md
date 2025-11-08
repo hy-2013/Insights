@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/010 outbox/2. 他山之石/【Agent】Context Engineering for AI Agents with LangChain and Manus-2025-M10/","tags":["#LLM/Agent"]}
+{"dg-publish":true,"permalink":"/010 outbox/2. 他山之石/【Agent】Context Engineering for AI Agents with LangChain and Manus-2025-M10/","tags":["LLM/Agent"]}
 ---
 
 
@@ -88,7 +88,7 @@ Pete：我们有“knowledge”（显式记忆）概念：例如“以后都用 
 ### Q&A：架构随模型演进的简化（00:34:18 - 00:36:14）
 Lance：模型变强后是否定期删脚手架？如何评估？
 
-Pete：我们已重构 Manus 5 次。我们不看静态基准的美学分数，而是固定架构、切换不同强弱模型。若切换到更强模型收益大，说明架构更“未来适配”。我们每 1-2 月做评审与内测，用开源模型与专有模型的早期版本做准备。
+Pete：我们已重构 Manus 5 次。我们不看静态基准的美学分数，而是固定架构、切换不同强弱模型。若切换到更强模型收益大，说明架构更“未来适配”。我们**每 1-2 月做评审与内测**，用开源模型与专有模型的早期版本做准备。
 
 ### Q&A：文件格式偏好（00:36:34 - 00:37:26）
 Lance：偏好 markdown 还是纯文本/日志？

@@ -21,6 +21,5 @@
 	- [[010 outbox/2. 他山之石/【AI】All things AI w @altcap @sama & @satyanadella.  A Halloween Special -2025-M10\|【AI】All things AI w @altcap @sama & @satyanadella.  A Halloween Special -2025-M10]]
 	- [[010 outbox/2. 他山之石/【AI】Andrej Karpathy — “We’re summoning ghosts, not building animals”-2025-M10\|【AI】Andrej Karpathy — “We’re summoning ghosts, not building animals”-2025-M10]]
 	- [[010 outbox/2. 他山之石/【AI】OpenAI DevDay 2025 Opening Keynote with Sam Altman-2025-M10\|【AI】OpenAI DevDay 2025 Opening Keynote with Sam Altman-2025-M10]]
-- [[010 outbox/Demo_summary\|Demo_summary]]
 
 
