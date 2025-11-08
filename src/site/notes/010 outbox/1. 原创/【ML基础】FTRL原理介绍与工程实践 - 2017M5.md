@@ -94,6 +94,6 @@ FTRL的工程实现伪代码如下：
 > [6] Xiao L. Dual Averaging Methods for Regularized Stochastic Learning and Online Optimization[M]. JMLR.org, 2010.
 
 ## 欢迎交流与合作
-目前主要兴趣是让agent在实际生活中落地，想进一步交流可加我微信（微信号：cleezhang）。一些[自我介绍](https://lee-agi.github.io/Insights/16695c5e82/)。
+目前主要兴趣是探索agent的真正落地，想进一步交流可加微信（微信号：cleezhang），一些[自我介绍](https://lee-agi.github.io/85ed64eda0/)。
 
 > 本文发表于 2017.5。

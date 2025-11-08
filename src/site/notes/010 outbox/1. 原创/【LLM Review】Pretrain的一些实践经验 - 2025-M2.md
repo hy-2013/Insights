@@ -73,4 +73,4 @@ Ye, T. _et al._ (2024) ‘Physics of Language Models: Part 2.1, Grade-School Mat
 Zhou, F. _et al._ (2024) ‘Programming every example: Lifting pre-training data quality like experts at scale’. Available at: https://arxiv.org/abs/2409.17115.
 
 ## 欢迎交流与合作
-目前主要兴趣是让agent在实际生活中落地，想进一步交流可加我微信（微信号：cleezhang）。一些[自我介绍](https://lee-agi.github.io/Insights/16695c5e82/)。
+目前主要兴趣是探索agent的真正落地，想进一步交流可加微信（微信号：cleezhang），一些[自我介绍](https://lee-agi.github.io/85ed64eda0/)。

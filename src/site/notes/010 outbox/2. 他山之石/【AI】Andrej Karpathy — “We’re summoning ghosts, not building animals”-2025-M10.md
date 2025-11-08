@@ -183,4 +183,4 @@ Andrej Karpathy：交替**on-demand深度学习**（为项目目标）与**bread
 Andrej Karpathy：喜欢本期就分享、评分/留言；赞助见 dworkesh.com/advertise。下一期见。
 
 ## 欢迎交流与合作
-目前主要兴趣是让agent在实际生活中落地，想进一步交流可加我微信（微信号：cleezhang）。一些[自我介绍](https://lee-agi.github.io/Insights/16695c5e82/)。
+目前主要兴趣是探索agent的真正落地，想进一步交流可加微信（微信号：cleezhang），一些[自我介绍](https://lee-agi.github.io/85ed64eda0/)。
