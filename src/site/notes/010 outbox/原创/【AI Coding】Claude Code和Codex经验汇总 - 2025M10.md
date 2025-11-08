@@ -74,3 +74,8 @@ npm install -g @openai/codex@latest
 | `codex resume --last` | `claude --continue` 恢复最近一次对话         |
 | `codex resume <id>`   | `claude -r <id>` 指定会话 ID 继续          |
 ![Pasted image 20251005193438.png](/img/user/990%20Attachment/Pasted%20image%2020251005193438.png)
+
+## 欢迎交流与合作
+目前主要兴趣是让agent在实际生活中落地，想进一步交流可加我微信（微信号：cleezhang）。一些[自我介绍]()。
+
+> 本文发表于 2025-11-08。

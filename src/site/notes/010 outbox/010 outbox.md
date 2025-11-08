@@ -4,6 +4,7 @@
 
 
 
+- [[010 outbox/【创业】From Idea to $650M Exit Lessons in Building AI Startups-2025-M10\|【创业】From Idea to $650M Exit Lessons in Building AI Startups-2025-M10]]
 - **他山之石**
 	- [[010 outbox/他山之石/【Agent】Building more effective AI agents - 2025-M10\|【Agent】Building more effective AI agents - 2025-M10]]
 	- [[010 outbox/他山之石/【Agent】Context Engineering for AI Agents with LangChain and Manus-2025-M10\|【Agent】Context Engineering for AI Agents with LangChain and Manus-2025-M10]]
@@ -20,5 +21,6 @@
 	- [[010 outbox/原创/【LLM】CT增量训练调研 - 2024W17\|【LLM】CT增量训练调研 - 2024W17]]
 	- [[010 outbox/原创/【ML基础】FTRL原理介绍与工程实践 - 2017M5\|【ML基础】FTRL原理介绍与工程实践 - 2017M5]]
 	- [[010 outbox/原创/【ML基础】从特征组合及其权重的角度对常用模型做统一解释 - 2022H1\|【ML基础】从特征组合及其权重的角度对常用模型做统一解释 - 2022H1]]
+	- [[010 outbox/原创/关于我\|关于我]]
 
 

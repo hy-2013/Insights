@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/010 outbox/他山之石/【Agent】Context Engineering for AI Agents with LangChain and Manus-2025-M10/","tags":["LLM/Agent"]}
+{"dg-publish":true,"permalink":"/010 outbox/他山之石/【Agent】Context Engineering for AI Agents with LangChain and Manus-2025-M10/","tags":["#LLM/Agent"]}
 ---
 
 
@@ -170,3 +170,4 @@ Pete：我们反而避免“同名”，因为我们的函数可能有不同的�
 Lance：时间差不多了，感谢 Pete。我们会提供录音与幻灯片。
 
 Pete：欢迎大家试用 Manus，我们有免费层。谢谢邀请！期待大家的作品。
+
