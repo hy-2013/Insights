@@ -33,6 +33,7 @@
 - 所有笔记的公开链接格式为 `/<article_id>/`，其中 `article_id` 为笔记在 `src/site/notes/` 内相对路径的 SHA-256 前 10 位十六进制字符串；仅 `gardenEntry` 或 `dg-home` 标签的页面保留 `/` 根路径。
 - 内部引用（如 `[[...]]`、文件树、图谱、搜索）依赖 `src/helpers/articleId.js` 注册的映射，请勿手动填写长路径或硬编码旧的 `/notes/...` 链接。
 - 若新增构建脚本或数据处理流程，需确保调用 `registerFromData`（或等效逻辑）以同步更新文章映射，避免链接失效。
+- 前端搜索脚本通过 Eleventy 的 `url` 过滤器拼接 `searchIndex.json` 的路径，并依据完整路径命名缓存键；调整搜索逻辑时需保留该前缀适配策略。
 
 ## Testing Guidelines
 - 尚无预置测试框架；新增功能或修复缺陷时，请先于仓库根目录创建/扩展 `test/`，编写可复现问题的回归测试（推荐 `pytest` 处理数据校验，或 Node 驱动的集成测试）。

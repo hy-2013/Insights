@@ -23,6 +23,10 @@ Docs are available at [dg-docs.ole.dev](https://dg-docs.ole.dev/)
 - 若需新增卡片或调整布局，请同步修改 `src/site/_includes/layouts/index.njk`、`src/site/_includes/layouts/note.njk` 与配套的 `custom-style.scss`，并保证 `.page-layout__nav`、`.page-layout__content` 与 `.page-layout__aside` 三个区域仍保持顺序。
 - 更新布局后请执行 `pytest test/test_layout_structure.py` 验证首页结构，确保导航、正文与侧栏均被渲染。
 
+## 搜索功能
+- 全局搜索与标签搜索依赖 Eleventy 构建产出的 `searchIndex.json`，请求地址通过 `url` 过滤器拼接，从而在 GitHub Pages 等子路径部署场景下保持可用。
+- 浏览器端缓存键采用 `searchIndex:<路径>` 格式，避免不同 `PATH_PREFIX` 共享同一份离线索引。
+
 ## GitHub Pages
 - 在仓库 `Settings > Pages` 中选择 **GitHub Actions** 作为构建来源，工作流文件位于 `.github/workflows/pages.yml`。
 - 推送到 `main` 分支会触发构建，首次成功后即可通过 `https://<GitHub 用户名>.github.io/Insights/` 访问站点。
