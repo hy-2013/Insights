@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/010 outbox/原创/【LLM Review】Decrypt Ptuning - 2023W32/","tags":["#Template"]}
+{"dg-publish":true,"permalink":"/010 outbox/原创/【LLM Review】Decrypt Ptuning - 2023W32/","tags":["#LLM/PostTrain"]}
 ---
 
 

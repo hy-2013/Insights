@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/010 outbox/原创/【LLM Review】Pretrain的一些实践经验 - 2025-M2/","tags":["#Template"]}
+{"dg-publish":true,"permalink":"/010 outbox/原创/【LLM Review】Pretrain的一些实践经验 - 2025-M2/","tags":["#LLM/Pretrain"]}
 ---
 
 

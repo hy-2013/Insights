@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/010 outbox/原创/【AI Coding】Claude Code和Codex经验汇总 - 2025M10/","tags":["#Template"]}
+{"dg-publish":true,"permalink":"/010 outbox/原创/【AI Coding】Claude Code和Codex经验汇总 - 2025M10/","tags":["LLM"]}
 ---
 
 
