@@ -22,5 +22,7 @@
 	- [[010 outbox/2. 他山之石/【AI】All things AI w @altcap @sama & @satyanadella.  A Halloween Special -2025-M10\|【AI】All things AI w @altcap @sama & @satyanadella.  A Halloween Special -2025-M10]]
 	- [[010 outbox/2. 他山之石/【AI】Andrej Karpathy — “We’re summoning ghosts, not building animals”-2025-M10\|【AI】Andrej Karpathy — “We’re summoning ghosts, not building animals”-2025-M10]]
 	- [[010 outbox/2. 他山之石/【AI】OpenAI DevDay 2025 Opening Keynote with Sam Altman-2025-M10\|【AI】OpenAI DevDay 2025 Opening Keynote with Sam Altman-2025-M10]]
+	- [[010 outbox/2. 他山之石/【AI】专访前FAIR研究总监田渊栋：Meta裁员之后，对AI的一些遗憾与思考-2025-M11\|【AI】专访前FAIR研究总监田渊栋：Meta裁员之后，对AI的一些遗憾与思考-2025-M11]]
+	- [[010 outbox/2. 他山之石/【创业】2018 - 2020，抖音超越快手的关键三年｜对谈 Lessie AI 创始人于北川-2025-M11\|【创业】2018 - 2020，抖音超越快手的关键三年｜对谈 Lessie AI 创始人于北川-2025-M11]]
 
 
